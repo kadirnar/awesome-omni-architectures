@@ -81,6 +81,12 @@ These patterns overlap. A model can combine a pretrained text backbone, modality
 | Continuous autoregressive generation | Predict continuous acoustic latents with a flow/diffusion/consistency head. | [CALM](../models/speech-foundations.md#calm), [TADA](../models/speech-foundations.md#tada), [VibeVoice](../models/speech-generation.md#vibevoice), [VoxCPM](../models/speech-generation.md#voxcpm). |
 | External generators or cascaded systems | A language model coordinates separately implemented generation components. | [NExT-GPT](../models/omni.md#next-gpt), [FireRedChat](../models/related.md#fireredchat). |
 
+## Figures
+
+Every model entry has a local visual recorded in [data/figures.json](../data/figures.json). Primary-source architecture, training or method figures are preferred; [credits](../assets/architectures/CREDITS.md) retain the source, image/PDF origin and figure locator. PDF crops and rasterized figures preserve technical content, and source figures retain their original rights.
+
+When no suitable source figure was obtained, a labeled editorial SVG shows the catalog's documented inputs and outputs. These interface summaries do not infer unpublished internals or imply that every input/output combination is supported. Family figures can be shared across entries when the cited source covers both; the model notes still qualify variants and external components.
+
 ## Dates
 
 `as_of` is the catalog snapshot date. `sources[].reviewed_on` is the review date. Neither is a model release date.

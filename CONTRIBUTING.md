@@ -9,7 +9,8 @@ The editable catalog is [data/models.json](data/models.json). The README, catego
 3. Link primary evidence: the author paper, official repository, model card or vendor documentation. Record the source title, the actual review date and the review level. Do not assign claims based only on a community list or a model name.
 4. Put related sizes, minor releases and aliases in `variants`. Explain restrictions when a family's capability columns span different checkpoints. Use an empty array when no variants are recorded.
 5. Use null for both `source_date` and `source_date_kind` if no publication/announcement date was established. Do not turn an API snapshot suffix into a release date. Update the top-level `as_of` when adding evidence reviewed after the current snapshot.
-6. Regenerate and check:
+6. Add a matching record to [data/figures.json](data/figures.json). Prefer a legible architecture or method figure from the same primary source. Store the PNG in `assets/architectures/`, record its original URL, figure number and SHA-256, and inspect the full image. If no suitable source figure is available, use `io-diagram`; the script generates a labeled SVG from the model's documented inputs and outputs.
+7. Regenerate and check:
 
 ```bash
 python3 scripts/catalog.py
@@ -17,7 +18,7 @@ python3 scripts/catalog.py --check
 git diff --check
 ```
 
-The script uses Python's standard library. It validates required fields, unique IDs/names, known labels, date consistency, source metadata, generated content and local links. A passing check does not replace reviewing the sources or verifying a claimed model capability.
+The script uses Python's standard library. It validates catalog metadata, one visual per model, figure provenance and checksums, generated content, and local links including images. A passing check does not replace reviewing the sources, inspecting figures or verifying a claimed model capability.
 
 For a deeper architecture article, use the optional [model template](templates/model-template.md). Keep measured results tied to exact model versions and benchmark settings. Distinguish paper claims from reproduction results, code licenses from weights licenses, and native model outputs from external generators.
 
@@ -36,3 +37,9 @@ For a deeper architecture article, use the optional [model template](templates/m
 | `sources[].kind` | `paper`, `repository`, `model-card`, `documentation`, `announcement` or `project`. |
 | `sources[].title` / `url` | Source title and direct HTTPS URL. |
 | `sources[].reviewed_on` / `review_level` | Actual review date and scope of inspection; see the methodology. |
+
+## Figure records
+
+`data/figures.json` maps each model ID to one figure record. For `source-figure`, use a local `.png` path, a `source_url` already listed in the model record, the exact image or PDF `origin_url`, a concise `locator` such as `Figure 2, PDF p. 3`, and the local file's `sha256` checksum. Review the selected figure itself; a benchmark plot or logo is not an architecture diagram. Different generations need their own figure unless the source explicitly covers the family.
+
+For `io-diagram`, use `assets/architectures/<model-id>.svg`, a primary `source_url`, `locator: "Input/output diagram"`, and null values for `origin_url` and `sha256`. The generated SVG summarizes the public interface without inferring internals. Keep third-party rights separate from repository licensing; see the [figure notice](assets/architectures/FIGURE_NOTICE.md).
