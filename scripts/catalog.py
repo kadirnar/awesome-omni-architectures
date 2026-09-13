@@ -16,16 +16,12 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "models.json"
 FIGURES = ROOT / "data" / "figures.json"
 CATEGORIES = {
-    "omni": ("Omni and audio-visual language models", "omni.md", "Omni"),
-    "dialogue": ("Spoken dialogue models", "speech-dialogue.md", "Dialogue"),
-    "foundation": ("Speech and audio language-model foundations", "speech-foundations.md", "Foundations"),
-    "understanding": ("Audio and speech understanding", "audio-understanding.md", "Understanding"),
-    "asr": ("LLM-based speech recognition and translation", "llm-asr.md", "ASR"),
-    "generation": ("Speech generation and language-model-based TTS", "speech-generation.md", "Generation"),
-    "related": ("Related omni models and speech systems", "related.md", "Related"),
+    "omni": ("Open-source omni models", "omni.md", "Omni"),
 }
 MODALITIES = {"T", "I", "V", "A", "S", "M", "X"}
-INTERACTIONS = {"generation", "text-output", "streaming", "full-duplex", "not-specified", "system"}
+INTERACTIONS = {"generation", "text-output", "streaming", "full-duplex", "not-specified"}
+CODE_LICENSES = {"Apache-2.0", "MIT", "BSD-2-Clause", "BSD-3-Clause", "ISC", "MPL-2.0", "GPL-3.0-only", "GPL-3.0-or-later", "AGPL-3.0-only", "AGPL-3.0-or-later"}
+WEIGHT_LICENSES = CODE_LICENSES | {"CC-BY-4.0", "CC-BY-SA-4.0", "CC0-1.0"}
 SOURCE_KINDS = {"paper", "repository", "model-card", "documentation", "announcement", "project"}
 REVIEWS = {"abstract", "readme", "model-card", "documentation", "announcement", "project"}
 LEGEND = "**Modalities:** T = text, I = image, V = video, A = general audio, S = speech, M = music, X = other structured modalities. A is a broad label, not a guarantee of every audio task. See the [methodology](../docs/methodology.md) for interaction labels, variant scope and inclusion rules."
@@ -61,6 +57,20 @@ def sources(model):
     return " · ".join(links)
 
 
+def resources(model):
+    release = model["release"]
+    covered = {release[key] for key in ("code_url", "weights_url", "code_license_url", "weights_license_url")}
+    other = [s for s in model["sources"] if s["url"] not in covered]
+    parts = [sources({"sources": other})] if other else []
+    parts += [f'[Code]({release["code_url"]})', f'[Weights]({release["weights_url"]})']
+    return " · ".join(parts)
+
+
+def license_links(model):
+    release = model["release"]
+    return f'**Licenses:** code [{release["code_license"]}]({release["code_license_url"]}) · weights [{release["weights_license"]}]({release["weights_license_url"]})'
+
+
 def iso_date(value, context):
     if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
         raise ValueError(f"{context}: expected YYYY-MM-DD")
@@ -68,14 +78,14 @@ def iso_date(value, context):
 
 
 def validate(catalog):
-    if catalog.get("schema_version") != 1:
+    if catalog.get("schema_version") != 2:
         raise ValueError("Unsupported schema_version")
     cutoff = iso_date(catalog["as_of"], "as_of")
     models = catalog["models"]
     if not isinstance(models, list) or not models:
         raise ValueError("models must be a nonempty list")
     ids, names = set(), set()
-    required = {"id", "name", "category", "inputs", "outputs", "interaction", "architecture", "notes", "variants", "source_date", "source_date_kind", "sources"}
+    required = {"id", "name", "category", "inputs", "outputs", "interaction", "architecture", "notes", "variants", "source_date", "source_date_kind", "sources", "release"}
     for m in models:
         if set(m) != required:
             raise ValueError(f'{m.get("id", "entry")}: unexpected/missing fields: {set(m) ^ required}')
@@ -119,12 +129,26 @@ def validate(catalog):
                 raise ValueError(f"{mid}: source reviewed after cutoff")
         if m["source_date_kind"] == "paper" and not any(s["kind"] == "paper" for s in m["sources"]):
             raise ValueError(f"{mid}: paper date without a paper source")
+        if "T" not in m["inputs"] or not {"I", "V"} & set(m["inputs"]) or not {"A", "S", "M"} & set(m["inputs"]):
+            raise ValueError(f"{mid}: omni entries require text, visual and audio inputs")
+        release = m["release"]
+        release_fields = {"checkpoint", "code_url", "weights_url", "code_license", "weights_license", "code_license_url", "weights_license_url", "weights_revision", "reviewed_on"}
+        if not isinstance(release, dict) or set(release) != release_fields:
+            raise ValueError(f"{mid}: complete open-source release evidence is required")
+        if not all(isinstance(value, str) and value.strip() for value in release.values()):
+            raise ValueError(f"{mid}: release fields must contain text")
+        if release["code_license"] not in CODE_LICENSES or release["weights_license"] not in WEIGHT_LICENSES:
+            raise ValueError(f"{mid}: both code and weights require a supported open license")
+        for field in ("code_url", "weights_url", "code_license_url", "weights_license_url"):
+            url = urlsplit(release[field])
+            if url.scheme != "https" or not url.netloc or url.username or url.password or re.search(r"\s", release[field]) or release[field] not in urls:
+                raise ValueError(f"{mid}: {field} must cite a primary HTTPS source")
+        if not re.fullmatch(r"[0-9a-f]{40}", release["weights_revision"]):
+            raise ValueError(f"{mid}: checkpoint revision must be a full commit hash")
+        if iso_date(release["reviewed_on"], mid) > cutoff:
+            raise ValueError(f"{mid}: release reviewed after cutoff")
         if m["interaction"] == "full-duplex" and not ({"S", "A"} & set(m["inputs"]) and {"S", "A"} & set(m["outputs"])):
             raise ValueError(f"{mid}: spoken full-duplex requires audio input and output")
-        if m["category"] in {"dialogue", "generation"} and not {"S", "A"} & set(m["outputs"]):
-            raise ValueError(f"{mid}: dialogue/generation category requires a speech/audio output path")
-        if m["category"] in {"understanding", "asr"} and {"S", "A", "M"} & set(m["outputs"]):
-            raise ValueError(f"{mid}: text-output category cannot assert generated audio")
 
 
 def render_category(key, models, cutoff, figures):
@@ -138,7 +162,7 @@ def render_category(key, models, cutoff, figures):
         visual_type = "Input/output diagram" if figure["kind"] == "io-diagram" else figure["locator"]
         lines += [
             f'<a id="{m["id"]}"></a>', "", f'### {m["name"]}', "",
-            m["architecture"].rstrip(".") + ".", "", sources(m), "",
+            m["architecture"].rstrip(".") + ".", "", resources(m), "", license_links(m), "",
             f'![{cell(m["name"])} — {visual_type}](../{figure["path"]})', "",
             f'*{visual_type} · [Source]({figure["source_url"]})*', "",
             "<details>", "<summary>Details</summary>", "",
@@ -154,35 +178,27 @@ def render_category(key, models, cutoff, figures):
 
 def render_readme(catalog, figures):
     models = sorted_models(catalog["models"])
-    counts = Counter(m["category"] for m in models)
-    core = len(models) - counts["related"]
     lines = [
         "# Awesome Omni Architectures [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)", "", GENERATED, "",
-        "A visual catalog of omni and speech language models. Every model below has a diagram, primary sources and a short architecture summary.", "",
-        f'**{core} models + {counts["related"]} related entries · Reviewed {catalog["as_of"]}**', "",
-        "[Model list](#models) · [All diagrams](#model-figures) · [Collections](#architectures) · [Timeline](docs/timeline.md) · [Methodology](docs/methodology.md) · [Contribute](CONTRIBUTING.md)", "",
-        "## Architectures", "",
-        "| Collection | Models |", "| --- | ---: |",
-    ]
-    for key, (title, filename, _) in CATEGORIES.items():
-        lines.append(f"| [{title}](models/{filename}) | {counts[key]} |")
-    lines += [
-        "", "Figures are credited to their sources. Editorial input/output diagrams are labeled. [Credits](assets/architectures/CREDITS.md).", "",
+        "Open-source omni models with public code, downloadable weights and verified licenses. Every entry combines text, vision and audio, with a diagram and primary sources.", "",
+        f'**{len(models)} open-source omni models · Reviewed {catalog["as_of"]}**', "",
+        "[Model list](#models) · [All diagrams](#model-figures) · [Model details](models/omni.md) · [Timeline](docs/timeline.md) · [Scope and licenses](docs/methodology.md) · [Contribute](CONTRIBUTING.md)", "",
         "## Models", "",
         "T: text · I: image · V: video · A: audio · S: speech · M: music · X: other. [Scope and labels](docs/methodology.md#modalities-and-interaction).", "",
         "<details>", f"<summary>Alphabetical model list · {len(models)} entries</summary>", "",
-        "| Model | Group | Input → output |", "| --- | --- | --- |",
+        "| Model | Input → output | Code license | Weights license |", "| --- | --- | --- | --- |",
     ]
     for m in models:
-        lines.append(f'| [{cell(m["name"])}](#{m["id"]}) | {CATEGORIES[m["category"]][2]} | {io(m)} |')
-    lines += ["", "</details>", "", "## Model figures", ""]
+        release = m["release"]
+        lines.append(f'| [{cell(m["name"])}](#{m["id"]}) | {io(m)} | [{release["code_license"]}]({release["code_license_url"]}) | [{release["weights_license"]}]({release["weights_license_url"]}) |')
+    lines += ["", "</details>", "", '<a id="architectures"></a>', "", "## Model figures", "", "Figures are credited to their sources. Editorial input/output diagrams are labeled. [Credits](assets/architectures/CREDITS.md).", ""]
     for m in models:
         figure = figures[m["id"]]
         visual_type = "Input/output diagram" if figure["kind"] == "io-diagram" else figure["locator"]
         lines += [
             f'<a id="{m["id"]}"></a>', "", f'### {m["name"]}', "",
             m["architecture"].rstrip(".") + ".", "",
-            f'{sources(m)} · [Details]({link(m)})', "",
+            f'{resources(m)} · [Details]({link(m)})', "", license_links(m), "",
             f'![{cell(m["name"])} — {visual_type}]({figure["path"]})', "",
             f'*{visual_type} · [Source]({figure["source_url"]})*', "",
         ]
@@ -268,7 +284,7 @@ def main():
         if stale:
             raise ValueError("Stale generated files: " + ", ".join(stale) + "; run python3 scripts/catalog.py")
         unique_sources = {s["url"] for m in models for s in m["sources"]}
-        print(f'{"Checked" if args.check else "Rendered"} {len(models)} entries, {len(unique_sources)} unique primary sources, {len(figures)} model visuals; catalog integrity, figure assets and local links OK.')
+        print(f'{"Checked" if args.check else "Rendered"} {len(models)} open-source omni entries, {len(unique_sources)} unique primary sources, {len(figures)} model visuals; release evidence, catalog integrity, figure assets and local links OK.')
     except (ValueError, KeyError, TypeError, OSError) as exc:
         print(f"Catalog error: {exc}", file=sys.stderr)
         return 1

@@ -1,47 +1,36 @@
-# Contributing a model
+# Contributing an open-source omni model
 
-[← Model index](README.md#models)
+[← Model list](README.md#models)
 
-The editable catalog is [data/models.json](data/models.json). The README, category lists and timeline are generated from it; edit the JSON first.
+Add a model only after verifying its official implementation, downloadable checkpoint and open code/weight licenses. It must accept text, visual and audio inputs. Follow the [scope](docs/methodology.md); API-only, speech-only, research-only and unlicensed releases do not qualify.
 
-1. Check the [scope and counting rules](docs/methodology.md), including existing family names and variants. Disambiguate unrelated models that share a name.
-2. Add a record with a stable lowercase hyphenated `id`, a display `name`, one `category`, input/output modality arrays, an `interaction` label, a short architecture description and capability notes.
-3. Link primary evidence: the author paper, official repository, model card or vendor documentation. Record the source title, the actual review date and the review level. Do not assign claims based only on a community list or a model name.
-4. Put related sizes, minor releases and aliases in `variants`. Explain restrictions when a family's capability columns span different checkpoints. Use an empty array when no variants are recorded.
-5. Use null for both `source_date` and `source_date_kind` if no publication/announcement date was established. Do not turn an API snapshot suffix into a release date. Update the top-level `as_of` when adding evidence reviewed after the current snapshot.
-6. Add a matching record to [data/figures.json](data/figures.json). Prefer a legible architecture or method figure from the same primary source. Store the PNG in `assets/architectures/`, record its original URL, figure number and SHA-256, and inspect the full image. If no suitable source figure is available, use `io-diagram`; the script generates a labeled SVG from the model's documented inputs and outputs.
-7. Regenerate and check:
+1. Edit [data/models.json](data/models.json), using schema version 2 and an existing entry as the template. Keep a stable ID, category `omni`, concise architecture/notes, verified modalities and primary sources.
+2. Add the `release` record below. Read the actual terms and source headers as well as license badges. Resolve restrictions or conflicting license claims before inclusion. List only verified checkpoint variants.
+3. Add a corresponding record to [data/figures.json](data/figures.json). Prefer an appropriate primary-source figure with its original URL, locator and SHA-256. Use a labeled `io-diagram` when no suitable source figure is available.
+4. Regenerate and validate:
 
-```bash
-python3 scripts/catalog.py
-python3 scripts/catalog.py --check
-git diff --check
-```
+   ```bash
+   python3 scripts/catalog.py
+   python3 scripts/catalog.py --check
+   git diff --check
+   ```
 
-The script uses Python's standard library. It validates catalog metadata, one visual per model, figure provenance and checksums, generated content, and local links including images. A passing check does not replace reviewing the sources, inspecting figures or verifying a claimed model capability.
+Every model must appear with its image, code, weights and license links in the README and its detail page. Keep longer qualifications in the detail page. Inspect rendered Markdown and any new or changed figures before sharing.
 
-Every entry appears with its image in both the README and its category page. Keep the README card to one architecture sentence, source links and the credited image; capability notes and variants belong on the category page. The alphabetical README index links directly to these illustrated cards.
+## Release evidence
 
-For a deeper architecture article, use the optional [model template](templates/model-template.md). Keep measured results tied to exact model versions and benchmark settings. Distinguish paper claims from reproduction results, code licenses from weights licenses, and native model outputs from external generators.
-
-## Record fields
-
-| Field | Meaning |
+| Field | Required evidence |
 | --- | --- |
-| `id` / `name` | Stable link anchor / human-readable model name. |
-| `category` | `omni`, `dialogue`, `foundation`, `understanding`, `asr`, `generation` or `related`. |
-| `inputs` / `outputs` | Arrays using T, I, V, A, S, M and X as defined in the methodology. |
-| `interaction` | `text-output`, `generation`, `streaming`, `full-duplex`, `system` or `not-specified`. |
-| `architecture` / `notes` | Concise design summary / capability scope and qualifications. |
-| `variants` | Verified checkpoint, release or alias names, grouped where appropriate. |
-| `source_date` / `source_date_kind` | YYYY-MM-DD and `paper` or `announcement`, or two nulls. |
-| `sources` | Nonempty array of primary-source records. |
-| `sources[].kind` | `paper`, `repository`, `model-card`, `documentation`, `announcement` or `project`. |
-| `sources[].title` / `url` | Source title and direct HTTPS URL. |
-| `sources[].reviewed_on` / `review_level` | Actual review date and scope of inspection; see the methodology. |
+| `checkpoint` | Exact publisher/checkpoint identifier for the reviewed weights |
+| `code_url` | Official model implementation; a demo that only calls an external API is insufficient |
+| `weights_url` | Public checkpoint repository containing actual weight files |
+| `code_license` / `weights_license` | Separately reviewed license identifiers |
+| `code_license_url` / `weights_license_url` | Primary license text, source header or explicit publisher declaration |
+| `weights_revision` | Full commit hash of the inspected checkpoint repository |
+| `reviewed_on` | Date the release evidence was inspected |
 
-## Figure records
+All four evidence URLs must also appear in the entry's `sources`, with a title, kind, review date and review level. Use an existing supported open license identifier; extend the validator only after reviewing an additional license. Do not substitute a repository's code license for the model's weight terms.
 
-`data/figures.json` maps each model ID to one figure record. For `source-figure`, use a local `.png` path, a `source_url` already listed in the model record, the exact image or PDF `origin_url`, a concise `locator` such as `Figure 2, PDF p. 3`, and the local file's `sha256` checksum. Review the selected figure itself; a benchmark plot or logo is not an architecture diagram. Different generations need their own figure unless the source explicitly covers the family.
+The generator uses Python's standard library. It validates scope, release metadata, primary-source URLs, dates, figure checksums, local links, anchors and generated-file consistency. It does not automatically verify remote availability or certify license claims.
 
-For `io-diagram`, use `assets/architectures/<model-id>.svg`, a primary `source_url`, `locator: "Input/output diagram"`, and null values for `origin_url` and `sha256`. The generated SVG summarizes the public interface without inferring internals. Keep third-party rights separate from repository licensing; see the [figure notice](assets/architectures/FIGURE_NOTICE.md).
+Source dates refer to papers or explicit announcements. Keep unknown dates null. Source figures retain their own rights; see the [figure notice](assets/architectures/FIGURE_NOTICE.md). Optional longer articles can use the [model template](templates/model-template.md).
