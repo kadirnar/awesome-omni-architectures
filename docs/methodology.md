@@ -2,46 +2,61 @@
 
 [← Model list](../README.md#models)
 
-This catalog includes open-source omni model releases with public implementations, downloadable checkpoints and separately verified code and weight licenses. Each entry has a language-model backbone and documented visual and audio inputs. Models that generate only text can qualify; speech output is recorded separately.
+The catalog covers publicly released omni, speech and audio **language models**, including the open releases evaluated by VoiceBench. Each model needs public implementation code, an actual checkpoint and a short explanation of its purpose. API-only products and unreleased paper proposals are excluded from the model cards.
 
-## Inclusion
+## Collections
 
-A release must have all of the following:
+| Collection | Scope |
+| --- | --- |
+| Omni | Text, visual and audio inputs; output may be text only or multimodal |
+| Speech | Speech/audio input and spoken output, including full-duplex dialogue and simultaneous translation |
+| Audio | Audio-to-text understanding, reasoning, spoken instructions and speech-language interaction controllers |
+| LLM-ASR | Speech recognition models built around a language-model backbone |
+| Cascade | VoiceBench baselines composed of separately released ASR and text LLM checkpoints |
 
-- An official implementation, either in the author's code repository or in the published checkpoint repository.
-- Publicly downloadable model weights, with a named checkpoint and a recorded revision.
-- Explicit open licenses for both the implementation and weights, supported by license text, source-file headers or a publisher's release declaration.
-- Documented text, visual and audio inputs, plus a primary source for its architecture.
+Text-only LLMs, visual-only VLMs, standalone audio encoders/codecs and pure text-to-speech generators are outside this catalog. An ASR checkpoint appears as a separate component when required to reproduce a VoiceBench cascade. Systems with their own trained speech-dialogue controller, such as DuplexCascade, are described as systems in their model notes.
 
-API-only products, paper-only proposals, standalone speech/TTS/ASR models, visual-only models and modular systems without their own qualifying omni checkpoint are excluded. Research-only, non-commercial and ambiguously licensed releases are also excluded. A public repository or an “open” model name does not establish an open license.
+## Release and license labels
 
-License badges are checked against the accompanying terms. Conflicting or additional usage restrictions prevent inclusion until clarified by the publisher. The code and weight licenses can differ; both are shown on every card. The selected checkpoint is the verified release, and other sizes or family members do not automatically inherit its license or capabilities.
+A public repository or a benchmark's “Open” flag does not establish an open-source license. Code and weight terms are checked separately, including model-card body text and inherited base-model conditions.
 
-Here, open-source describes the code and weight release. The catalog does not certify the openness of the complete training pipeline or training datasets. Training data, third-party components and architecture figures can have separate licenses.
+| Label | Meaning |
+| --- | --- |
+| Open license | Explicit open licenses found for the reviewed code and checkpoint |
+| Custom / restricted | Public code and weights with custom, research-only, noncommercial or base-model conditions; these are not presented as unrestricted open-source releases |
+| License unclear | Code and actual weights are public, but a complete license declaration was not located; inclusion is a research record, not permission to use them |
+
+The expanded scope includes LFM's custom-licensed public audio models and distinguishes restricted or unclear VoiceBench releases. Missing licenses are never filled in from a related model. A conflicting restrictive declaration overrides a permissive metadata badge for catalog classification. Each card links to the evidence and states the limitation briefly.
+
+Checkpoint repositories are inspected for actual weight files, and their exact revisions are recorded. For author-hosted archives without repository commits, an explicitly labeled HTTP ETag is retained; it is not a cryptographic checksum or an immutable URL. Normal public access gates requiring acceptance of published terms are identified in the notes. A demo that only calls a hosted API is insufficient. The [VoiceBench audit](voicebench.md) records exact benchmark checkpoints that could not be verified without substituting a different release.
+
+“Open license” concerns the reviewed code and weights; it does not certify open training data or the entire training process. Separately downloaded codecs, speech decoders and other dependencies retain their own terms.
 
 ## Modalities and interaction
 
 | Symbol | Meaning |
 | --- | --- |
 | T | Text, including prompts and transcripts |
-| I / V | Images / video, which may be processed as sampled frames |
+| I / V | Images / video, possibly sampled frames |
 | A / S / M | General audio / speech / music |
-| X | Other structured modalities, detailed in the model notes |
+| X | Other structured modalities, explained in the notes |
 
-Input/output sets summarize documented capabilities, not every possible combination. `text-output` means the model responds in text. `generation` makes no latency claim; `streaming` requires documented incremental processing or output. `full-duplex` requires explicit support for concurrent listening and speaking. `not-specified` retains uncertainty.
+Input/output sets summarize supported interfaces, not every possible task combination. `text-output` means text responses. `generation` makes no latency claim. `streaming` requires documented incremental processing or output. `full-duplex` requires concurrent listening and speaking; a benchmark wrapper's label alone is insufficient. `not-specified` retains uncertainty.
+
+Each entry selects a named checkpoint. Distinct benchmark releases, backbones, reasoning modes or language adaptations may have separate cards. Routine quantizations, mirrors and repeated size variants do not inflate the model count. Other family members do not automatically inherit the selected release's capabilities or license.
 
 ## Sources and dates
 
-Papers, official repositories, checkpoint cards and publisher documentation support the entries. `sources[].review_level` records whether the reviewed material was an abstract, README, model card, documentation, announcement or project page. License evidence is linked separately in `release`, with the checkpoint revision and review date.
+Primary papers, repositories, checkpoint cards and publisher documentation support the entries. `review_level` distinguishes abstracts, inspected paper sections, READMEs and model cards. See the [research trail](research.md).
 
-`source_date` is the first paper submission or a verified dated announcement, not necessarily the checkpoint release date. An older paper can describe a family with a later open release. The [timeline](timeline.md) retains those paper dates; unknown dates remain blank. Repository activity and API version suffixes are not release dates.
+`source_date` is a verified paper or announcement date, **not a checkpoint release date**. Family papers may predate later variants; dates for variants remain blank unless established separately. Repository activity and model-name suffixes are not used to guess release dates.
 
-No model weights were downloaded for this review. Public checkpoint file listings and license declarations were inspected; model inference, benchmark results and latency were not reproduced. Automated checks verify metadata and links offline, while source availability and licensing require renewed primary-source review.
+No model weights were downloaded or executed. Checkpoint file listings, implementation files and release declarations were inspected; benchmark scores and latency were not reproduced. Offline checks validate schema, release evidence, VoiceBench mappings, figures, links and generated-file consistency. They do not certify licensing or future remote availability.
 
 ## Figures and maintenance
 
-Every entry has a local figure in both the README and [model details](../models/omni.md). [Figure credits](../assets/architectures/CREDITS.md) retain the primary source, original image/PDF URL and figure locator. Family figures are identified in the notes when the verified checkpoint is a later release. Labeled input/output diagrams summarize documented interfaces without inventing internal architecture.
+Every entry has a local image in the README and its collection page. Prefer a relevant architecture or method figure from the authors. Shared family figures are labeled. When a suitable author figure is unavailable, an editorial input/output SVG describes the documented interface without inventing internal connections.
 
-The repository license does not relicense third-party figures; see the [figure notice](../assets/architectures/FIGURE_NOTICE.md).
+[Figure credits](../assets/architectures/CREDITS.md) record the primary source, original image URL, locator and checksum. Third-party figures retain their own rights under the [figure notice](../assets/architectures/FIGURE_NOTICE.md).
 
-[data/models.json](../data/models.json) and [data/figures.json](../data/figures.json) are the sources of truth. The generator requires omni inputs, code/weight license evidence and one visual per entry. See [CONTRIBUTING.md](../CONTRIBUTING.md) for updates.
+The source files are [models.json](../data/models.json), [figures.json](../data/figures.json) and [voicebench.json](../data/voicebench.json). See [CONTRIBUTING.md](../CONTRIBUTING.md) for updates. This is a dated, maintained catalog, not a claim that every model worldwide has been found.
