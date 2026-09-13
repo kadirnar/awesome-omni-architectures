@@ -20,6 +20,8 @@ git diff --check
 
 The script uses Python's standard library. It validates catalog metadata, one visual per model, figure provenance and checksums, generated content, and local links including images. A passing check does not replace reviewing the sources, inspecting figures or verifying a claimed model capability.
 
+Every entry appears with its image in both the README and its category page. Keep the README card to one architecture sentence, source links and the credited image; capability notes and variants belong on the category page. The alphabetical README index links directly to these illustrated cards.
+
 For a deeper architecture article, use the optional [model template](templates/model-template.md). Keep measured results tied to exact model versions and benchmark settings. Distinguish paper claims from reproduction results, code licenses from weights licenses, and native model outputs from external generators.
 
 ## Record fields

@@ -158,12 +158,10 @@ def render_readme(catalog, figures):
     core = len(models) - counts["related"]
     lines = [
         "# Awesome Omni Architectures [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)", "", GENERATED, "",
-        "A visual catalog of omni and speech language models. Each model links to a diagram, primary sources and optional notes.", "",
+        "A visual catalog of omni and speech language models. Every model below has a diagram, primary sources and a short architecture summary.", "",
         f'**{core} models + {counts["related"]} related entries · Reviewed {catalog["as_of"]}**', "",
-        "[Models](#models) · [Architectures](#architectures) · [Timeline](docs/timeline.md) · [Methodology](docs/methodology.md) · [Contribute](CONTRIBUTING.md)", "",
+        "[Model list](#models) · [All diagrams](#model-figures) · [Collections](#architectures) · [Timeline](docs/timeline.md) · [Methodology](docs/methodology.md) · [Contribute](CONTRIBUTING.md)", "",
         "## Architectures", "",
-        "| Omni · Qwen3-Omni | SpeechLM · Moshi |", "| --- | --- |",
-        f'| [![Qwen3-Omni architecture]({figures["qwen3-omni"]["path"]})](models/omni.md#qwen3-omni) | [![Moshi architecture]({figures["moshi"]["path"]})](models/speech-dialogue.md#moshi) |', "",
         "| Collection | Models |", "| --- | ---: |",
     ]
     for key, (title, filename, _) in CATEGORIES.items():
@@ -172,10 +170,22 @@ def render_readme(catalog, figures):
         "", "Figures are credited to their sources. Editorial input/output diagrams are labeled. [Credits](assets/architectures/CREDITS.md).", "",
         "## Models", "",
         "T: text · I: image · V: video · A: audio · S: speech · M: music · X: other. [Scope and labels](docs/methodology.md#modalities-and-interaction).", "",
+        "<details>", f"<summary>Alphabetical model list · {len(models)} entries</summary>", "",
         "| Model | Group | Input → output |", "| --- | --- | --- |",
     ]
     for m in models:
-        lines.append(f'| [{cell(m["name"])}]({link(m)}) | {CATEGORIES[m["category"]][2]} | {io(m)} |')
+        lines.append(f'| [{cell(m["name"])}](#{m["id"]}) | {CATEGORIES[m["category"]][2]} | {io(m)} |')
+    lines += ["", "</details>", "", "## Model figures", ""]
+    for m in models:
+        figure = figures[m["id"]]
+        visual_type = "Input/output diagram" if figure["kind"] == "io-diagram" else figure["locator"]
+        lines += [
+            f'<a id="{m["id"]}"></a>', "", f'### {m["name"]}', "",
+            m["architecture"].rstrip(".") + ".", "",
+            f'{sources(m)} · [Details]({link(m)})', "",
+            f'![{cell(m["name"])} — {visual_type}]({figure["path"]})', "",
+            f'*{visual_type} · [Source]({figure["source_url"]})*', "",
+        ]
     lines += [
         "", "---", "",
         "[JSON catalog](data/models.json) · [Apache 2.0](LICENSE) · [Third-party figure notice](assets/architectures/FIGURE_NOTICE.md)", "",
