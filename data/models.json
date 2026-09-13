@@ -1,0 +1,1400 @@
+{
+  "schema_version": 2,
+  "as_of": "2026-09-13",
+  "models": [
+    {
+      "id": "emova",
+      "name": "EMOVA (Qwen2.5-7B)",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "S"
+      ],
+      "outputs": [
+        "T",
+        "S"
+      ],
+      "interaction": "not-specified",
+      "architecture": "Speech-vision-language alignment",
+      "notes": "The linked open release uses Qwen2.5-7B for image understanding and expressive speech interaction. The figure describes the EMOVA family; license evidence applies to this Qwen checkpoint.",
+      "variants": [
+        "emova-qwen-2-5-7b-hf"
+      ],
+      "source_date": "2024-09-26",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions",
+          "url": "https://arxiv.org/abs/2409.18042",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "EMOVA — released implementation",
+          "url": "https://github.com/emova-ollm/EMOVA",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "Emova-ollm/emova-qwen-2-5-7b-hf — official model card",
+          "url": "https://huggingface.co/Emova-ollm/emova-qwen-2-5-7b-hf",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "EMOVA — code license evidence",
+          "url": "https://github.com/emova-ollm/EMOVA/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "EMOVA — checkpoint license evidence",
+          "url": "https://huggingface.co/Emova-ollm/emova-qwen-2-5-7b-hf/blob/6bb14e7aeba16e44d290fa7e0ecd81e863bc6505/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "Emova-ollm/emova-qwen-2-5-7b-hf",
+        "code_url": "https://github.com/emova-ollm/EMOVA",
+        "weights_url": "https://huggingface.co/Emova-ollm/emova-qwen-2-5-7b-hf",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/emova-ollm/EMOVA/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/Emova-ollm/emova-qwen-2-5-7b-hf/blob/6bb14e7aeba16e44d290fa7e0ecd81e863bc6505/README.md",
+        "weights_revision": "6bb14e7aeba16e44d290fa7e0ecd81e863bc6505",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "gemma-4-audio-capable-variants",
+      "name": "Gemma 4 E4B",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T"
+      ],
+      "interaction": "text-output",
+      "architecture": "Hybrid-attention language backbone with vision and audio encoders",
+      "notes": "The verified E4B instruction-tuned checkpoint accepts text, images, video frames and audio, and generates text. The family figure also covers other sizes; this entry selects E4B.",
+      "variants": [
+        "gemma-4-E4B-it"
+      ],
+      "source_date": "2026-07-02",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Gemma 4 Technical Report",
+          "url": "https://arxiv.org/abs/2607.02770",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "documentation",
+          "title": "Gemma 4 model overview | Google AI for Developers",
+          "url": "https://ai.google.dev/gemma/docs/core",
+          "reviewed_on": "2026-09-12",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Audio understanding | Gemma | Google AI for Developers",
+          "url": "https://ai.google.dev/gemma/docs/capabilities/audio",
+          "reviewed_on": "2026-09-12",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "repository",
+          "title": "Gemma 4 (audio-capable variants) — released implementation",
+          "url": "https://github.com/google-deepmind/gemma",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "google/gemma-4-E4B-it — official model card",
+          "url": "https://huggingface.co/google/gemma-4-E4B-it",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Gemma 4 (audio-capable variants) — code license evidence",
+          "url": "https://github.com/google-deepmind/gemma/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Gemma 4 (audio-capable variants) — checkpoint license evidence",
+          "url": "https://huggingface.co/google/gemma-4-E4B-it/blob/ee0ef6023621cff504d758262d4e04895a5af4a2/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "google/gemma-4-E4B-it",
+        "code_url": "https://github.com/google-deepmind/gemma",
+        "weights_url": "https://huggingface.co/google/gemma-4-E4B-it",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/google-deepmind/gemma/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/google/gemma-4-E4B-it/blob/ee0ef6023621cff504d758262d4e04895a5af4a2/README.md",
+        "weights_revision": "ee0ef6023621cff504d758262d4e04895a5af4a2",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "humanomniv2",
+      "name": "HumanOmniV2",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T"
+      ],
+      "interaction": "text-output",
+      "architecture": "Context-aware reasoning and RL",
+      "notes": "Extends the HumanOmni line with multimodal reasoning training.",
+      "variants": [
+        "HumanOmniV2"
+      ],
+      "source_date": "2025-06-26",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "HumanOmniV2: From Understanding to Omni-Modal Reasoning with Context",
+          "url": "https://arxiv.org/abs/2506.21277",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "HumanOmniV2 — released implementation",
+          "url": "https://github.com/HumanMLLM/HumanOmniV2",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "PhilipC/HumanOmniV2 — official model card",
+          "url": "https://huggingface.co/PhilipC/HumanOmniV2",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "HumanOmniV2 — code license evidence",
+          "url": "https://github.com/HumanMLLM/HumanOmniV2/blob/main/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "HumanOmniV2 — checkpoint license evidence",
+          "url": "https://huggingface.co/PhilipC/HumanOmniV2/blob/459fbfe536d9a1e0cda872c339bb24051bd2de3b/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "PhilipC/HumanOmniV2",
+        "code_url": "https://github.com/HumanMLLM/HumanOmniV2",
+        "weights_url": "https://huggingface.co/PhilipC/HumanOmniV2",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/HumanMLLM/HumanOmniV2/blob/main/README.md",
+        "weights_license_url": "https://huggingface.co/PhilipC/HumanOmniV2/blob/459fbfe536d9a1e0cda872c339bb24051bd2de3b/README.md",
+        "weights_revision": "459fbfe536d9a1e0cda872c339bb24051bd2de3b",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "longcat-flash-omni",
+      "name": "LongCat-Flash-Omni",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T",
+        "S"
+      ],
+      "interaction": "streaming",
+      "architecture": "MoE with perception and speech modules",
+      "notes": "Real-time audiovisual interaction built on the LongCat-Flash backbone.",
+      "variants": [
+        "LongCat-Flash-Omni"
+      ],
+      "source_date": "2025-10-31",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "LongCat-Flash-Omni Technical Report",
+          "url": "https://arxiv.org/abs/2511.00279",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "LongCat-Flash-Omni — released implementation",
+          "url": "https://github.com/meituan-longcat/LongCat-Flash-Omni",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "meituan-longcat/LongCat-Flash-Omni — official model card",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Omni",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "LongCat-Flash-Omni — code license evidence",
+          "url": "https://github.com/meituan-longcat/LongCat-Flash-Omni/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "LongCat-Flash-Omni — checkpoint license evidence",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Omni/blob/f65b9038a559d3624d5e52fad28bbe083eb2341e/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "meituan-longcat/LongCat-Flash-Omni",
+        "code_url": "https://github.com/meituan-longcat/LongCat-Flash-Omni",
+        "weights_url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Omni",
+        "code_license": "MIT",
+        "weights_license": "MIT",
+        "code_license_url": "https://github.com/meituan-longcat/LongCat-Flash-Omni/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/meituan-longcat/LongCat-Flash-Omni/blob/f65b9038a559d3624d5e52fad28bbe083eb2341e/LICENSE",
+        "weights_revision": "f65b9038a559d3624d5e52fad28bbe083eb2341e",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "longcat-next",
+      "name": "LongCat-Next",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "A"
+      ],
+      "outputs": [
+        "T",
+        "I",
+        "A"
+      ],
+      "interaction": "generation",
+      "architecture": "Unified discrete tokens",
+      "notes": "Models multiple modalities through token sequences; check the report for individual generation paths.",
+      "variants": [
+        "LongCat-Next"
+      ],
+      "source_date": "2026-03-29",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "LongCat-Next: Lexicalizing Modalities as Discrete Tokens",
+          "url": "https://arxiv.org/abs/2603.27538",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "meituan-longcat/LongCat-Next — official repository",
+          "url": "https://github.com/meituan-longcat/LongCat-Next",
+          "reviewed_on": "2026-09-12",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "meituan-longcat/LongCat-Next — official model card",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-Next",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "LongCat-Next — code license evidence",
+          "url": "https://github.com/meituan-longcat/LongCat-Next/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "LongCat-Next — checkpoint license evidence",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-Next/blob/0cf0631862402ff36366e513e4023d22e7e5c84c/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "meituan-longcat/LongCat-Next",
+        "code_url": "https://github.com/meituan-longcat/LongCat-Next",
+        "weights_url": "https://huggingface.co/meituan-longcat/LongCat-Next",
+        "code_license": "MIT",
+        "weights_license": "MIT",
+        "code_license_url": "https://github.com/meituan-longcat/LongCat-Next/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/meituan-longcat/LongCat-Next/blob/0cf0631862402ff36366e513e4023d22e7e5c84c/LICENSE",
+        "weights_revision": "0cf0631862402ff36366e513e4023d22e7e5c84c",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "megrez-omni",
+      "name": "Megrez-Omni",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "A"
+      ],
+      "outputs": [
+        "T"
+      ],
+      "interaction": "text-output",
+      "architecture": "Compact multimodal understanding model",
+      "notes": "Megrez-3B-Omni is the multimodal member; Megrez-3B-Instruct is text-only.",
+      "variants": [
+        "Megrez-3B-Omni"
+      ],
+      "source_date": "2025-02-19",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Megrez-Omni Technical Report",
+          "url": "https://arxiv.org/abs/2502.15803",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "Megrez-Omni — released implementation",
+          "url": "https://github.com/infinigence/Infini-Megrez-Omni",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "Infinigence/Megrez-3B-Omni — official model card",
+          "url": "https://huggingface.co/Infinigence/Megrez-3B-Omni",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Megrez-Omni — code license evidence",
+          "url": "https://github.com/infinigence/Infini-Megrez-Omni/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Megrez-Omni — checkpoint license evidence",
+          "url": "https://huggingface.co/Infinigence/Megrez-3B-Omni/blob/2a15ac85df31645708eb0bdf769aa1f92eb44a31/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "Infinigence/Megrez-3B-Omni",
+        "code_url": "https://github.com/infinigence/Infini-Megrez-Omni",
+        "weights_url": "https://huggingface.co/Infinigence/Megrez-3B-Omni",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/infinigence/Infini-Megrez-Omni/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/Infinigence/Megrez-3B-Omni/blob/2a15ac85df31645708eb0bdf769aa1f92eb44a31/README.md",
+        "weights_revision": "2a15ac85df31645708eb0bdf769aa1f92eb44a31",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "mimo-v2-5",
+      "name": "MiMo-V2.5",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T"
+      ],
+      "interaction": "text-output",
+      "architecture": "Hybrid-attention MoE with vision/audio encoders",
+      "notes": "Native multimodal understanding on the MiMo-V2-Flash backbone.",
+      "variants": [
+        "MiMo-V2.5"
+      ],
+      "source_date": null,
+      "source_date_kind": null,
+      "sources": [
+        {
+          "kind": "model-card",
+          "title": "XiaomiMiMo/MiMo-V2.5 · Hugging Face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5",
+          "reviewed_on": "2026-09-12",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "MiMo-V2.5 — released implementation",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5/blob/63651580ca774f8504f676040460aed3e1244ac1/modeling_mimo_v2.py",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "MiMo-V2.5 — checkpoint license evidence",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5/blob/63651580ca774f8504f676040460aed3e1244ac1/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "XiaomiMiMo/MiMo-V2.5",
+        "code_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5/blob/63651580ca774f8504f676040460aed3e1244ac1/modeling_mimo_v2.py",
+        "weights_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5",
+        "code_license": "Apache-2.0",
+        "weights_license": "MIT",
+        "code_license_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5/blob/63651580ca774f8504f676040460aed3e1244ac1/modeling_mimo_v2.py",
+        "weights_license_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5/blob/63651580ca774f8504f676040460aed3e1244ac1/README.md",
+        "weights_revision": "63651580ca774f8504f676040460aed3e1244ac1",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "ming-flash-omni",
+      "name": "Ming-Flash-Omni",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T",
+        "I",
+        "A"
+      ],
+      "interaction": "generation",
+      "architecture": "Sparse MoE and generative heads",
+      "notes": "Extends the Ming family with image tasks and joint acoustic generation.",
+      "variants": [
+        "Ming-flash-omni-Preview"
+      ],
+      "source_date": "2025-10-28",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Ming-Flash-Omni: A Sparse, Unified Architecture for Multimodal Perception and Generation",
+          "url": "https://arxiv.org/abs/2510.24821",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "Ming-Flash-Omni — released implementation",
+          "url": "https://github.com/inclusionAI/Ming",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "inclusionAI/Ming-flash-omni-Preview — official model card",
+          "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-Preview",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Ming-Flash-Omni — code license evidence",
+          "url": "https://github.com/inclusionAI/Ming/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Ming-Flash-Omni — checkpoint license evidence",
+          "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-Preview/blob/8791771443ae7525ee27140dcf6c8f2830f45888/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "inclusionAI/Ming-flash-omni-Preview",
+        "code_url": "https://github.com/inclusionAI/Ming",
+        "weights_url": "https://huggingface.co/inclusionAI/Ming-flash-omni-Preview",
+        "code_license": "MIT",
+        "weights_license": "MIT",
+        "code_license_url": "https://github.com/inclusionAI/Ming/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/inclusionAI/Ming-flash-omni-Preview/blob/8791771443ae7525ee27140dcf6c8f2830f45888/README.md",
+        "weights_revision": "8791771443ae7525ee27140dcf6c8f2830f45888",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "ming-flash-omni-2-0",
+      "name": "Ming-Flash-Omni 2.0",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T",
+        "I",
+        "A"
+      ],
+      "interaction": "generation",
+      "architecture": "MoE with continuous autoregression",
+      "notes": "Supports speech, sound and music synthesis alongside image generation and editing.",
+      "variants": [
+        "Ming-flash-omni-2.0"
+      ],
+      "source_date": null,
+      "source_date_kind": null,
+      "sources": [
+        {
+          "kind": "repository",
+          "title": "inclusionAI/Ming — official repository",
+          "url": "https://github.com/inclusionAI/Ming",
+          "reviewed_on": "2026-09-12",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "inclusionAI/Ming-flash-omni-2.0 — official model card",
+          "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Ming-Flash-Omni 2.0 — code license evidence",
+          "url": "https://github.com/inclusionAI/Ming/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Ming-Flash-Omni 2.0 — checkpoint license evidence",
+          "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0/blob/6a2e1dec07066d20f62a743ac7c34284e4a3932d/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "inclusionAI/Ming-flash-omni-2.0",
+        "code_url": "https://github.com/inclusionAI/Ming",
+        "weights_url": "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0",
+        "code_license": "MIT",
+        "weights_license": "MIT",
+        "code_license_url": "https://github.com/inclusionAI/Ming/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0/blob/6a2e1dec07066d20f62a743ac7c34284e4a3932d/README.md",
+        "weights_revision": "6a2e1dec07066d20f62a743ac7c34284e4a3932d",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "ming-omni",
+      "name": "Ming-Lite-Omni",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T",
+        "I",
+        "S"
+      ],
+      "interaction": "generation",
+      "architecture": "Modality-routed MoE and output decoders",
+      "notes": "The publicly released Ming-Lite-Omni checkpoint covers multimodal perception, speech and image generation. This entry selects the Lite release from the broader Ming-Omni research family.",
+      "variants": [
+        "Ming-Lite-Omni"
+      ],
+      "source_date": "2025-06-11",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Ming-Omni: A Unified Multimodal Model for Perception and Generation",
+          "url": "https://arxiv.org/abs/2506.09344",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "Ming-Omni — released implementation",
+          "url": "https://github.com/inclusionAI/Ming",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "inclusionAI/Ming-Lite-Omni — official model card",
+          "url": "https://huggingface.co/inclusionAI/Ming-Lite-Omni",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Ming-Omni — code license evidence",
+          "url": "https://github.com/inclusionAI/Ming/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Ming-Omni — checkpoint license evidence",
+          "url": "https://huggingface.co/inclusionAI/Ming-Lite-Omni/blob/ecd74fdae16ecb5a97429f943f262f7715ca2ee6/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "inclusionAI/Ming-Lite-Omni",
+        "code_url": "https://github.com/inclusionAI/Ming",
+        "weights_url": "https://huggingface.co/inclusionAI/Ming-Lite-Omni",
+        "code_license": "MIT",
+        "weights_license": "MIT",
+        "code_license_url": "https://github.com/inclusionAI/Ming/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/inclusionAI/Ming-Lite-Omni/blob/ecd74fdae16ecb5a97429f943f262f7715ca2ee6/README.md",
+        "weights_revision": "ecd74fdae16ecb5a97429f943f262f7715ca2ee6",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "mini-omni2",
+      "name": "Mini-Omni2",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "S"
+      ],
+      "outputs": [
+        "T",
+        "S"
+      ],
+      "interaction": "full-duplex",
+      "architecture": "Parallel text/audio generation",
+      "notes": "Adds visual input and interruption-aware duplex interaction to Mini-Omni.",
+      "variants": [
+        "mini-omni2"
+      ],
+      "source_date": "2024-10-15",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Mini-Omni2: Towards Open-source GPT-4o with Vision, Speech and Duplex Capabilities",
+          "url": "https://arxiv.org/abs/2410.11190",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "Mini-Omni2 — released implementation",
+          "url": "https://github.com/gpt-omni/mini-omni2",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "gpt-omni/mini-omni2 — official model card",
+          "url": "https://huggingface.co/gpt-omni/mini-omni2",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Mini-Omni2 — code license evidence",
+          "url": "https://github.com/gpt-omni/mini-omni2/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Mini-Omni2 — checkpoint license evidence",
+          "url": "https://huggingface.co/gpt-omni/mini-omni2/blob/49f474f4c38f80cf716859bb1b1442df2a8dea46/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "gpt-omni/mini-omni2",
+        "code_url": "https://github.com/gpt-omni/mini-omni2",
+        "weights_url": "https://huggingface.co/gpt-omni/mini-omni2",
+        "code_license": "MIT",
+        "weights_license": "MIT",
+        "code_license_url": "https://github.com/gpt-omni/mini-omni2/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/gpt-omni/mini-omni2/blob/49f474f4c38f80cf716859bb1b1442df2a8dea46/README.md",
+        "weights_revision": "49f474f4c38f80cf716859bb1b1442df2a8dea46",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "minicpm-o-2-6",
+      "name": "MiniCPM-o 2.6",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T",
+        "S"
+      ],
+      "interaction": "streaming",
+      "architecture": "Vision-language backbone and audio modules",
+      "notes": "The 2.6 omni release supports speech and audiovisual interaction.",
+      "variants": [
+        "MiniCPM-o-2_6"
+      ],
+      "source_date": null,
+      "source_date_kind": null,
+      "sources": [
+        {
+          "kind": "repository",
+          "title": "OpenBMB/MiniCPM-o — official repository",
+          "url": "https://github.com/OpenBMB/MiniCPM-o",
+          "reviewed_on": "2026-09-12",
+          "review_level": "readme"
+        },
+        {
+          "kind": "repository",
+          "title": "MiniCPM-o 2.6 — released implementation",
+          "url": "https://github.com/OpenBMB/MiniCPM-V",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "openbmb/MiniCPM-o-2_6 — official model card",
+          "url": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "MiniCPM-o 2.6 — code license evidence",
+          "url": "https://github.com/OpenBMB/MiniCPM-V/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "MiniCPM-o 2.6 — checkpoint license evidence",
+          "url": "https://huggingface.co/openbmb/MiniCPM-o-2_6/blob/06849bfd36da94da1f5a88fa17e8ba63f08a4c4d/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "openbmb/MiniCPM-o-2_6",
+        "code_url": "https://github.com/OpenBMB/MiniCPM-V",
+        "weights_url": "https://huggingface.co/openbmb/MiniCPM-o-2_6",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/OpenBMB/MiniCPM-V/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/openbmb/MiniCPM-o-2_6/blob/06849bfd36da94da1f5a88fa17e8ba63f08a4c4d/README.md",
+        "weights_revision": "06849bfd36da94da1f5a88fa17e8ba63f08a4c4d",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "minicpm-o-4-5",
+      "name": "MiniCPM-o 4.5",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T",
+        "S"
+      ],
+      "interaction": "full-duplex",
+      "architecture": "Full-duplex multimodal interaction",
+      "notes": "Adds simultaneous seeing, listening and speaking with proactive behavior.",
+      "variants": [
+        "MiniCPM-o-4_5"
+      ],
+      "source_date": "2026-04-30",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction",
+          "url": "https://arxiv.org/abs/2604.27393",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "MiniCPM-o 4.5 — released implementation",
+          "url": "https://github.com/OpenBMB/MiniCPM-V",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "openbmb/MiniCPM-o-4_5 — official model card",
+          "url": "https://huggingface.co/openbmb/MiniCPM-o-4_5",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "MiniCPM-o 4.5 — code license evidence",
+          "url": "https://github.com/OpenBMB/MiniCPM-V/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "MiniCPM-o 4.5 — checkpoint license evidence",
+          "url": "https://huggingface.co/openbmb/MiniCPM-o-4_5/blob/503e754207c94da6bb26850b4469f367c9ea3582/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "openbmb/MiniCPM-o-4_5",
+        "code_url": "https://github.com/OpenBMB/MiniCPM-V",
+        "weights_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/OpenBMB/MiniCPM-V/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/openbmb/MiniCPM-o-4_5/blob/503e754207c94da6bb26850b4469f367c9ea3582/README.md",
+        "weights_revision": "503e754207c94da6bb26850b4469f367c9ea3582",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "minimind-o",
+      "name": "MiniMind-O",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "S"
+      ],
+      "outputs": [
+        "T",
+        "S"
+      ],
+      "interaction": "streaming",
+      "architecture": "Thinker–Talker",
+      "notes": "The released MiniMind-3O checkpoint combines text, vision and speech within a small Thinker–Talker system.",
+      "variants": [
+        "minimind-3o"
+      ],
+      "source_date": "2026-05-05",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "MiniMind-O Technical Report: An Open Small-Scale Speech-Native Omni Model",
+          "url": "https://arxiv.org/abs/2605.03937",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "jingyaogong/minimind-o — official repository",
+          "url": "https://github.com/jingyaogong/minimind-o",
+          "reviewed_on": "2026-09-12",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "jingyaogong/minimind-3o — official model card",
+          "url": "https://huggingface.co/jingyaogong/minimind-3o",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "MiniMind-O — code license evidence",
+          "url": "https://github.com/jingyaogong/minimind-o/blob/master/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "MiniMind-O — checkpoint license evidence",
+          "url": "https://huggingface.co/jingyaogong/minimind-3o/blob/ee3febbd08cc5b2bd41c039c825a8934232fee33/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "jingyaogong/minimind-3o",
+        "code_url": "https://github.com/jingyaogong/minimind-o",
+        "weights_url": "https://huggingface.co/jingyaogong/minimind-3o",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/jingyaogong/minimind-o/blob/master/LICENSE",
+        "weights_license_url": "https://huggingface.co/jingyaogong/minimind-3o/blob/ee3febbd08cc5b2bd41c039c825a8934232fee33/README.md",
+        "weights_revision": "ee3febbd08cc5b2bd41c039c825a8934232fee33",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "ola",
+      "name": "Ola",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T"
+      ],
+      "interaction": "text-output",
+      "architecture": "Progressive modality alignment",
+      "notes": "Uses video as a bridge for joint image, video and audio understanding.",
+      "variants": [
+        "Ola-7b"
+      ],
+      "source_date": "2025-02-06",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Ola: Pushing the Frontiers of Omni-Modal Language Model",
+          "url": "https://arxiv.org/abs/2502.04328",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "Ola — released implementation",
+          "url": "https://github.com/Ola-Omni/Ola",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "THUdyh/Ola-7b — official model card",
+          "url": "https://huggingface.co/THUdyh/Ola-7b",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Ola — code license evidence",
+          "url": "https://github.com/Ola-Omni/Ola/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Ola — checkpoint license evidence",
+          "url": "https://huggingface.co/THUdyh/Ola-7b/blob/d2fcaa533792480ce748321bea5101fed29d857e/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "THUdyh/Ola-7b",
+        "code_url": "https://github.com/Ola-Omni/Ola",
+        "weights_url": "https://huggingface.co/THUdyh/Ola-7b",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/Ola-Omni/Ola/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/THUdyh/Ola-7b/blob/d2fcaa533792480ce748321bea5101fed29d857e/README.md",
+        "weights_revision": "d2fcaa533792480ce748321bea5101fed29d857e",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "omni-autothink",
+      "name": "Omni-AutoThink",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T"
+      ],
+      "interaction": "text-output",
+      "architecture": "Adaptive SFT and reinforcement learning",
+      "notes": "Adjusts reasoning behavior across text, audio and visual tasks.",
+      "variants": [
+        "Omni-AutoThink"
+      ],
+      "source_date": "2025-12-03",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Omni-AutoThink: Adaptive Multimodal Reasoning via Reinforcement Learning",
+          "url": "https://arxiv.org/abs/2512.03783",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "Omni-AutoThink — released implementation",
+          "url": "https://github.com/yangdongchao/Omni-AutoThink",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "Dongchao/Omni-AutoThink — official model card",
+          "url": "https://huggingface.co/Dongchao/Omni-AutoThink",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Omni-AutoThink — code license evidence",
+          "url": "https://github.com/yangdongchao/Omni-AutoThink/blob/main/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Omni-AutoThink — checkpoint license evidence",
+          "url": "https://huggingface.co/Dongchao/Omni-AutoThink/blob/4acf74dcc5ca543ff34361fa76f5137022ecf774/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "Dongchao/Omni-AutoThink",
+        "code_url": "https://github.com/yangdongchao/Omni-AutoThink",
+        "weights_url": "https://huggingface.co/Dongchao/Omni-AutoThink",
+        "code_license": "MIT",
+        "weights_license": "MIT",
+        "code_license_url": "https://github.com/yangdongchao/Omni-AutoThink/blob/main/README.md",
+        "weights_license_url": "https://huggingface.co/Dongchao/Omni-AutoThink/blob/4acf74dcc5ca543ff34361fa76f5137022ecf774/README.md",
+        "weights_revision": "4acf74dcc5ca543ff34361fa76f5137022ecf774",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "phi-4-multimodal",
+      "name": "Phi-4-multimodal",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "A"
+      ],
+      "outputs": [
+        "T"
+      ],
+      "interaction": "text-output",
+      "architecture": "Mixture of LoRAs",
+      "notes": "The multimodal release accepts audio and vision; Phi-4-mini is a separate text model.",
+      "variants": [
+        "Phi-4-multimodal-instruct"
+      ],
+      "source_date": "2025-03-03",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Phi-4-Mini Technical Report: Compact yet Powerful Multimodal Language Models via Mixture-of-LoRAs",
+          "url": "https://arxiv.org/abs/2503.01743",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "documentation",
+          "title": "Phi-4-multimodal — released implementation",
+          "url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct/blob/93f923e1a7727d1c4f446756212d9d3e8fcc5d81/modeling_phi4mm.py",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "model-card",
+          "title": "microsoft/Phi-4-multimodal-instruct — official model card",
+          "url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Phi-4-multimodal — checkpoint license evidence",
+          "url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct/blob/93f923e1a7727d1c4f446756212d9d3e8fcc5d81/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "microsoft/Phi-4-multimodal-instruct",
+        "code_url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct/blob/93f923e1a7727d1c4f446756212d9d3e8fcc5d81/modeling_phi4mm.py",
+        "weights_url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+        "code_license": "Apache-2.0",
+        "weights_license": "MIT",
+        "code_license_url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct/blob/93f923e1a7727d1c4f446756212d9d3e8fcc5d81/modeling_phi4mm.py",
+        "weights_license_url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct/blob/93f923e1a7727d1c4f446756212d9d3e8fcc5d81/LICENSE",
+        "weights_revision": "93f923e1a7727d1c4f446756212d9d3e8fcc5d81",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "qwen2-5-omni",
+      "name": "Qwen2.5-Omni",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T",
+        "S"
+      ],
+      "interaction": "streaming",
+      "architecture": "Thinker–Talker and time-aligned RoPE",
+      "notes": "Processes audiovisual inputs and produces streaming speech with text.",
+      "variants": [
+        "Qwen2.5-Omni-7B"
+      ],
+      "source_date": "2025-03-26",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Qwen2.5-Omni Technical Report",
+          "url": "https://arxiv.org/abs/2503.20215",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "Qwen2.5-Omni — released implementation",
+          "url": "https://github.com/QwenLM/Qwen2.5-Omni",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "Qwen/Qwen2.5-Omni-7B — official model card",
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Omni-7B",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Qwen2.5-Omni — code license evidence",
+          "url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Qwen2.5-Omni — checkpoint license evidence",
+          "url": "https://huggingface.co/Qwen/Qwen2.5-Omni-7B/blob/ae9e1690543ffd5c0221dc27f79834d0294cba00/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "Qwen/Qwen2.5-Omni-7B",
+        "code_url": "https://github.com/QwenLM/Qwen2.5-Omni",
+        "weights_url": "https://huggingface.co/Qwen/Qwen2.5-Omni-7B",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/QwenLM/Qwen2.5-Omni/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/Qwen/Qwen2.5-Omni-7B/blob/ae9e1690543ffd5c0221dc27f79834d0294cba00/LICENSE",
+        "weights_revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "qwen3-omni",
+      "name": "Qwen3-Omni",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "I",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T",
+        "S"
+      ],
+      "interaction": "streaming",
+      "architecture": "Thinker–Talker MoE",
+      "notes": "The verified Instruct checkpoint includes Thinker and Talker, supporting visual/audio understanding and speech output.",
+      "variants": [
+        "Qwen3-Omni-30B-A3B-Instruct"
+      ],
+      "source_date": "2025-09-22",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "Qwen3-Omni Technical Report",
+          "url": "https://arxiv.org/abs/2509.17765",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "Qwen3-Omni — released implementation",
+          "url": "https://github.com/QwenLM/Qwen3-Omni",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "Qwen/Qwen3-Omni-30B-A3B-Instruct — official model card",
+          "url": "https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "Qwen3-Omni — code license evidence",
+          "url": "https://github.com/QwenLM/Qwen3-Omni/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "Qwen3-Omni — checkpoint license evidence",
+          "url": "https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct/blob/26291f793822fb6be9555850f06dfe95f2d7e695/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        "code_url": "https://github.com/QwenLM/Qwen3-Omni",
+        "weights_url": "https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/QwenLM/Qwen3-Omni/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct/blob/26291f793822fb6be9555850f06dfe95f2d7e695/README.md",
+        "weights_revision": "26291f793822fb6be9555850f06dfe95f2d7e695",
+        "reviewed_on": "2026-09-13"
+      }
+    },
+    {
+      "id": "video-salmonn-2",
+      "name": "video-SALMONN 2+ (7B)",
+      "category": "omni",
+      "inputs": [
+        "T",
+        "V",
+        "A"
+      ],
+      "outputs": [
+        "T"
+      ],
+      "interaction": "text-output",
+      "architecture": "Caption training and multi-round DPO",
+      "notes": "The selected release is the complete 7B checkpoint of the audio-visual 2+ generation. The paper and figure describe the broader caption-enhanced video-SALMONN 2 family.",
+      "variants": [
+        "video-SALMONN2_plus_7B_full"
+      ],
+      "source_date": "2025-06-18",
+      "source_date_kind": "paper",
+      "sources": [
+        {
+          "kind": "paper",
+          "title": "video-SALMONN 2: Caption-Enhanced Audio-Visual Large Language Models",
+          "url": "https://arxiv.org/abs/2506.15220",
+          "reviewed_on": "2026-09-12",
+          "review_level": "abstract"
+        },
+        {
+          "kind": "repository",
+          "title": "video-SALMONN 2 — released implementation",
+          "url": "https://github.com/bytedance/video-SALMONN-2",
+          "reviewed_on": "2026-09-13",
+          "review_level": "readme"
+        },
+        {
+          "kind": "model-card",
+          "title": "tsinghua-ee/video-SALMONN2_plus_7B_full — official model card",
+          "url": "https://huggingface.co/tsinghua-ee/video-SALMONN2_plus_7B_full",
+          "reviewed_on": "2026-09-13",
+          "review_level": "model-card"
+        },
+        {
+          "kind": "documentation",
+          "title": "video-SALMONN 2 — code license evidence",
+          "url": "https://github.com/bytedance/video-SALMONN-2/blob/main/LICENSE",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        },
+        {
+          "kind": "documentation",
+          "title": "video-SALMONN 2 — checkpoint license evidence",
+          "url": "https://huggingface.co/tsinghua-ee/video-SALMONN2_plus_7B_full/blob/aab28bd55258742f7dbaca319b2031f69b662f8f/README.md",
+          "reviewed_on": "2026-09-13",
+          "review_level": "documentation"
+        }
+      ],
+      "release": {
+        "checkpoint": "tsinghua-ee/video-SALMONN2_plus_7B_full",
+        "code_url": "https://github.com/bytedance/video-SALMONN-2",
+        "weights_url": "https://huggingface.co/tsinghua-ee/video-SALMONN2_plus_7B_full",
+        "code_license": "Apache-2.0",
+        "weights_license": "Apache-2.0",
+        "code_license_url": "https://github.com/bytedance/video-SALMONN-2/blob/main/LICENSE",
+        "weights_license_url": "https://huggingface.co/tsinghua-ee/video-SALMONN2_plus_7B_full/blob/aab28bd55258742f7dbaca319b2031f69b662f8f/README.md",
+        "weights_revision": "aab28bd55258742f7dbaca319b2031f69b662f8f",
+        "reviewed_on": "2026-09-13"
+      }
+    }
+  ]
+}

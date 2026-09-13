@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "models": {
+    "emova": {
+      "kind": "source-figure",
+      "path": "assets/architectures/emova.png",
+      "source_url": "https://arxiv.org/abs/2409.18042",
+      "origin_url": "https://arxiv.org/html/2409.18042v4/flowchart.png",
+      "locator": "Family figure · Figure 2",
+      "sha256": "18c87efad31f86a8416af2af47011344ede325a947d291ef8b4491cccaccbf4f"
+    },
+    "gemma-4-audio-capable-variants": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/gemma-4-audio-capable-variants.svg",
+      "source_url": "https://arxiv.org/abs/2607.02770",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "humanomniv2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/humanomniv2.png",
+      "source_url": "https://arxiv.org/abs/2506.21277",
+      "origin_url": "https://arxiv.org/html/2506.21277v1/model.png",
+      "locator": "Figure 4",
+      "sha256": "6d46b883410ca692c196fff8f42bbbc9d864ad119773b9bcfcdd0cf5ba7a6637"
+    },
+    "longcat-flash-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/longcat-flash-omni.png",
+      "source_url": "https://arxiv.org/abs/2511.00279",
+      "origin_url": "https://arxiv.org/html/2511.00279v2/architecture.png",
+      "locator": "Figure 2",
+      "sha256": "d1103d9dc62dbbf2b0adc2da03518f13760bef67012a14f94e54f27733ebd8dd"
+    },
+    "longcat-next": {
+      "kind": "source-figure",
+      "path": "assets/architectures/longcat-next.png",
+      "source_url": "https://arxiv.org/abs/2603.27538",
+      "origin_url": "https://arxiv.org/html/2603.27538v1/Overview.png",
+      "locator": "Figure 2",
+      "sha256": "46d01b76dd22e1072b0d03abdcf404f1c974d24c89fdb976f7335c3d7accecb3"
+    },
+    "megrez-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/megrez-omni.png",
+      "source_url": "https://arxiv.org/abs/2502.15803",
+      "origin_url": "https://arxiv.org/html/2502.15803v1/architecture_detail.jpg",
+      "locator": "Figure 2",
+      "sha256": "d5e9a3b5f9ebad855ee7a6b24f2a35c7accb10a8e731dcd784a806ec2ee72795"
+    },
+    "mimo-v2-5": {
+      "kind": "source-figure",
+      "path": "assets/architectures/mimo-v2-5.png",
+      "source_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5",
+      "origin_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5/resolve/main/assets/architecture.svg",
+      "locator": "Official architecture diagram",
+      "sha256": "e46b7bd3626e45858e99686512dafd5fc1b3724803abf37ba261c99e74a16f8b"
+    },
+    "ming-flash-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ming-flash-omni.png",
+      "source_url": "https://arxiv.org/abs/2510.24821",
+      "origin_url": "https://arxiv.org/html/2510.24821v3/ming_flash.png",
+      "locator": "Figure 2",
+      "sha256": "8ca6961a26901c868c4581b61666f5c78f639be4ade9596cbacea1e20785d83d"
+    },
+    "ming-flash-omni-2-0": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ming-flash-omni-2-0.png",
+      "source_url": "https://github.com/inclusionAI/Ming",
+      "origin_url": "https://mdn.alipayobjects.com/huamei_xg7bx2/afts/img/WxgUSrdZVj8AAAAAdJAAAAgADhHHAQFr/original",
+      "locator": "Official architecture diagram",
+      "sha256": "2ebaa0ef9adbc489c7fb0ea6b8ed0af9b6d26447e97603f81276c7fc0eb5e680"
+    },
+    "ming-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ming-omni.png",
+      "source_url": "https://arxiv.org/abs/2506.09344",
+      "origin_url": "https://arxiv.org/html/2506.09344v1/Ming_moe_uni_v1.png",
+      "locator": "Family figure · Figure 2",
+      "sha256": "d36623cb640b4a0018f6e542105abcfb64e1c2e1993e9bac885a6a507eeca5fd"
+    },
+    "mini-omni2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/mini-omni2.png",
+      "source_url": "https://arxiv.org/abs/2410.11190",
+      "origin_url": "https://arxiv.org/html/2410.11190v3/framework.png",
+      "locator": "Figure 1",
+      "sha256": "baaa3e7e10e8ff8c45f4605f066f665650c3967227645b4fe76f97ee96d5d738"
+    },
+    "minicpm-o-2-6": {
+      "kind": "source-figure",
+      "path": "assets/architectures/minicpm-o-2-6.png",
+      "source_url": "https://github.com/OpenBMB/MiniCPM-o",
+      "origin_url": "https://raw.githubusercontent.com/OpenBMB/MiniCPM-o/main/assets/minicpm-o-26-framework-v2.png",
+      "locator": "Official architecture diagram",
+      "sha256": "e93bbca2702ca913c4023dc2917b87fa4ede175a058ff248fa682484aaad9a08"
+    },
+    "minicpm-o-4-5": {
+      "kind": "source-figure",
+      "path": "assets/architectures/minicpm-o-4-5.png",
+      "source_url": "https://arxiv.org/abs/2604.27393",
+      "origin_url": "https://arxiv.org/html/2604.27393v1/arch.svg",
+      "locator": "Figure 4",
+      "sha256": "534ed336027fb724b16b155c1129242be3faf08c40057783da81d8fd855c5fe7"
+    },
+    "minimind-o": {
+      "kind": "source-figure",
+      "path": "assets/architectures/minimind-o.png",
+      "source_url": "https://arxiv.org/abs/2605.03937",
+      "origin_url": "https://arxiv.org/html/2605.03937v1/architecture.png",
+      "locator": "Figure 1",
+      "sha256": "2ab5286f915bfb58bba857b438f0c8ae9b9afcadf88b47943f955407a7a66c0a"
+    },
+    "ola": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ola.png",
+      "source_url": "https://arxiv.org/abs/2502.04328",
+      "origin_url": "https://arxiv.org/html/2502.04328v3/fig0-new2.png",
+      "locator": "Figure 3",
+      "sha256": "08a2b031e173a25de87c5b680a05fe31682b470553f74682d73c9cccb0dc8aea"
+    },
+    "omni-autothink": {
+      "kind": "source-figure",
+      "path": "assets/architectures/omni-autothink.png",
+      "source_url": "https://arxiv.org/abs/2512.03783",
+      "origin_url": "https://arxiv.org/html/2512.03783v2/adapthink_v2.svg",
+      "locator": "Figure 1",
+      "sha256": "1bfb0ccf0b1d659bc81a204b81e136f241fbbc1f420499a4710f5c500b315fd3"
+    },
+    "phi-4-multimodal": {
+      "kind": "source-figure",
+      "path": "assets/architectures/phi-4-multimodal.png",
+      "source_url": "https://arxiv.org/abs/2503.01743",
+      "origin_url": "https://arxiv.org/html/2503.01743v2/phi-o.svg",
+      "locator": "Figure 1",
+      "sha256": "b725a9511524a3f14654e58f9a97a2db350d370d05e280c8f06f73a0b53e7390"
+    },
+    "qwen2-5-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/qwen2-5-omni.png",
+      "source_url": "https://arxiv.org/abs/2503.20215",
+      "origin_url": "https://arxiv.org/html/2503.20215v1/figures/overview.png",
+      "locator": "Figure 2",
+      "sha256": "2d45a64b478bee273f677c527ee8acfbebfd2c69a2169a3d035afd90eb6c1889"
+    },
+    "qwen3-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/qwen3-omni.png",
+      "source_url": "https://arxiv.org/abs/2509.17765",
+      "origin_url": "https://arxiv.org/html/2509.17765v1/figures/overview.png",
+      "locator": "Figure 2",
+      "sha256": "2fd6b7ba1cb6f2ebe75375bd22b1cdc807457a1114c95c05f894d76bb41edf2d"
+    },
+    "video-salmonn-2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/video-salmonn-2.png",
+      "source_url": "https://arxiv.org/abs/2506.15220",
+      "origin_url": "https://arxiv.org/html/2506.15220v3/iclr26main.png",
+      "locator": "Family figure · Figure 1",
+      "sha256": "3516d9496b49a98f668f868cd9ff0162883dfb9e6dfab7feb67200cea668b145"
+    }
+  }
+}
