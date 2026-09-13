@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-09-13",
+  "source_url": "https://github.com/MatthewCYM/VoiceBench/blob/6992cf4fc51d0426c52c4805b5002e0aae49118a/docs/index.html",
+  "source_revision": "6992cf4fc51d0426c52c4805b5002e0aae49118a",
+  "leaderboard_url": "https://matthewcym.github.io/VoiceBench/",
+  "total_rows": 46,
+  "open_rows": 43,
+  "excluded_closed": [
+    "Whisper-v3-large + GPT-4o",
+    "GPT-4o-Audio",
+    "GPT-4o-mini-Audio"
+  ],
+  "rows": [
+    {
+      "name": "BR-Voice-Reasoner",
+      "architecture": "vision_audio_llm",
+      "catalog_id": "br-voice-reasoner",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": [
+        "https://huggingface.co/brgroup/BR-Voice-Reasoner"
+      ]
+    },
+    {
+      "name": "LFG-3",
+      "architecture": "audiollm",
+      "catalog_id": "lfg-3",
+      "status": "listed",
+      "note": "Public code and weights found; licensing is incomplete, as shown on the model card.",
+      "evidence_urls": []
+    },
+    {
+      "name": "NVIDIA Nemotron 3 Nano Omni 30B A3B",
+      "architecture": "vision_audio_llm",
+      "catalog_id": "nemotron-3-nano-omni",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Ultravox-GLM-4P7",
+      "architecture": "audiollm",
+      "catalog_id": null,
+      "status": "checkpoint-unverified",
+      "note": "VoiceBench evaluates a hosted GLM-4.7 endpoint. No exact GLM-4.7 checkpoint was located in the publisher’s public releases; GLM-4.6 is listed separately.",
+      "evidence_urls": [
+        "https://github.com/MatthewCYM/VoiceBench/blob/6992cf4fc51d0426c52c4805b5002e0aae49118a/src/models/ultravox_glm4p7.py",
+        "https://huggingface.co/fixie-ai"
+      ]
+    },
+    {
+      "name": "Qwen3-Omni-30B-A3B-Thinking",
+      "architecture": "vision_audio_llm",
+      "catalog_id": "qwen3-omni-thinking",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": [
+        "https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Thinking"
+      ]
+    },
+    {
+      "name": "Ultravox-GLM-4P7 (thinking)",
+      "architecture": "audiollm",
+      "catalog_id": null,
+      "status": "checkpoint-unverified",
+      "note": "VoiceBench evaluates a hosted GLM-4.7 endpoint. No exact GLM-4.7 checkpoint was located in the publisher’s public releases; GLM-4.6 is listed separately.",
+      "evidence_urls": [
+        "https://github.com/MatthewCYM/VoiceBench/blob/6992cf4fc51d0426c52c4805b5002e0aae49118a/src/models/ultravox_glm4p7.py",
+        "https://huggingface.co/fixie-ai"
+      ]
+    },
+    {
+      "name": "Ultravox-GLM-4P6",
+      "architecture": "audiollm",
+      "catalog_id": "ultravox-0-7-glm-4-6",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "LFG-2",
+      "architecture": "audiollm",
+      "catalog_id": "lfg-2",
+      "status": "listed",
+      "note": "Public code and weights found; licensing is incomplete, as shown on the model card.",
+      "evidence_urls": []
+    },
+    {
+      "name": "Qwen3-Omni-30B-A3B-Instruct",
+      "architecture": "omni_hd",
+      "catalog_id": "qwen3-omni",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": [
+        "https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Instruct"
+      ]
+    },
+    {
+      "name": "Ultravox-v0.6-LLaMA-3.3-70B",
+      "architecture": "audiollm",
+      "catalog_id": "ultravox-0-6-70b",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "LFG-1",
+      "architecture": "audiollm",
+      "catalog_id": "lfg-1",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Parakeet-TDT-0.6b-V2 + Qwen3-8B",
+      "architecture": "cascaded",
+      "catalog_id": "parakeet-qwen3",
+      "status": "listed",
+      "note": "Both component checkpoints are public; the exact benchmark wrapper was not located.",
+      "evidence_urls": []
+    },
+    {
+      "name": "Whisper-v3-large + LLaMA-3.1-8B",
+      "architecture": "cascaded",
+      "catalog_id": "whisper-v3-llama31",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Kimi-Audio",
+      "architecture": "omni_hd",
+      "catalog_id": "kimi-audio",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Whisper-v3-turbo + LLaMA-3.1-8B",
+      "architecture": "cascaded",
+      "catalog_id": "whisper-turbo-llama31",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Ultravox-v0.5-LLaMA-3.1-8B",
+      "architecture": "audiollm",
+      "catalog_id": "ultravox-0-5-8b",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Ultravox-v0.4.1-LLaMA-3.1-8B",
+      "architecture": "audiollm",
+      "catalog_id": "ultravox-0-4-1",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Baichuan-Omni-1.5",
+      "architecture": "omni_hd",
+      "catalog_id": "baichuan-omni-1-5",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "MiniCPM-o",
+      "architecture": "omni_hd",
+      "catalog_id": "minicpm-o-2-6",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Whisper-v3-turbo + LLaMA-3.2-3B",
+      "architecture": "cascaded",
+      "catalog_id": "whisper-turbo-llama32",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Baichuan-Audio",
+      "architecture": "omni_hd",
+      "catalog_id": "baichuan-audio",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "MERaLiON",
+      "architecture": "audiollm",
+      "catalog_id": "meralion-audiollm",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "VITA-1.5",
+      "architecture": "omni_hd",
+      "catalog_id": "vita-1-5",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Phi-4-multimodal",
+      "architecture": "vision_audio_llm",
+      "catalog_id": "phi-4-multimodal",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Ola",
+      "architecture": "omni_hd",
+      "catalog_id": "ola",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Lyra-Base",
+      "architecture": "omni_hd",
+      "catalog_id": "lyra",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Nemotron 3 VoiceChat (V1)",
+      "architecture": "fullduplex",
+      "catalog_id": null,
+      "status": "checkpoint-unverified",
+      "note": "The submission describes an early-access VoiceChat V1 release. Its exact checkpoint was not verified; the later public NemotronLabs VoiceChat 11B is a different release.",
+      "evidence_urls": [
+        "https://github.com/MatthewCYM/VoiceBench/issues/29",
+        "https://developer.nvidia.com/nemotron-voicechat-early-access",
+        "https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B"
+      ]
+    },
+    {
+      "name": "Ultravox-v0.5-LLaMA-3.2-1B",
+      "architecture": "audiollm",
+      "catalog_id": "ultravox-0-5-1b",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "DiVA",
+      "architecture": "audiollm",
+      "catalog_id": "diva",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "GLM-4-Voice",
+      "architecture": "omni_hd",
+      "catalog_id": "glm-4-voice",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Qwen2-Audio",
+      "architecture": "audiollm",
+      "catalog_id": "qwen2-audio",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Freeze-Omni",
+      "architecture": "fullduplex",
+      "catalog_id": "freeze-omni",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Step-Audio",
+      "architecture": "omni_hd",
+      "catalog_id": "step-audio",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Megrez-3B-Omni",
+      "architecture": "omni_hd",
+      "catalog_id": "megrez-omni",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Ichigo",
+      "architecture": "omni_hd",
+      "catalog_id": "ichigo",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Lyra-Mini",
+      "architecture": "omni_hd",
+      "catalog_id": "lyra-mini",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Mair-hub-0.5B-Omni",
+      "architecture": "omni_hd",
+      "catalog_id": "mair-hub-omni",
+      "status": "listed",
+      "note": "Public code and weights found; licensing is incomplete, as shown on the model card.",
+      "evidence_urls": []
+    },
+    {
+      "name": "LLaMA-Omni",
+      "architecture": "omni_hd",
+      "catalog_id": "llama-omni",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "VITA-1.0",
+      "architecture": "omni_hd",
+      "catalog_id": "vita",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "SLAM-Omni",
+      "architecture": "omni_hd",
+      "catalog_id": "slam-omni",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Mini-Omni2",
+      "architecture": "omni_hd",
+      "catalog_id": "mini-omni2",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Mini-Omni",
+      "architecture": "omni_hd",
+      "catalog_id": "mini-omni",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    },
+    {
+      "name": "Moshi",
+      "architecture": "fullduplex",
+      "catalog_id": "moshi",
+      "status": "listed",
+      "note": "",
+      "evidence_urls": []
+    }
+  ]
+}

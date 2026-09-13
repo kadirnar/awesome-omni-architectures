@@ -7,8 +7,8 @@
 <text x="42" y="76" font-size="32" font-weight="700" fill="#0f172a">Gemma 4 E4B</text>
 <rect x="365" y="140.0" width="390" height="194" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
 <text x="560" y="177.0" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2" fill="#64748b">MODEL / SYSTEM</text>
-<text x="560" y="224.0" text-anchor="middle" font-size="19" font-weight="600" fill="#0f172a">Hybrid-attention language backbone</text>
-<text x="560" y="250.0" text-anchor="middle" font-size="19" font-weight="600" fill="#0f172a">with vision and audio encoders</text>
+<text x="560" y="224.0" text-anchor="middle" font-size="19" font-weight="600" fill="#0f172a">Hybrid-attention backbone with</text>
+<text x="560" y="250.0" text-anchor="middle" font-size="19" font-weight="600" fill="#0f172a">vision and audio encoders</text>
 <text x="560" y="304.0" text-anchor="middle" font-size="14" fill="#64748b">text-output</text>
 <text x="42" y="122" font-size="13" font-weight="700" letter-spacing="2" fill="#0369a1">INPUTS</text>
 <rect x="42" y="150.0" width="236" height="36" rx="8" fill="#ffffff" stroke="#cbd5e1"/>

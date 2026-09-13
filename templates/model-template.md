@@ -1,21 +1,19 @@
 # Model name
 
-[← Model list](../README.md#models)
+One sentence explaining what the model does.
 
-One short sentence explaining the model's omni architecture.
+[Code](https://example.com/code) · [Weights](https://example.com/weights) · [Paper](https://example.com/paper)
 
-**Release:** named checkpoint · [Code](https://example.org/code) · [Weights](https://example.org/weights)
+**Release:** Open license / Custom or restricted / License unclear. Link separate code and weight terms and explain any limitations.
 
-**Licenses:** code [identifier](https://example.org/code-license) · weights [identifier](https://example.org/weights-license)
+<!-- Add a credited architecture figure or labeled input/output diagram. -->
 
-![Model architecture](../assets/architectures/model-id.png)
+**Architecture:** One short sentence about the core design.
 
-*Figure locator · [Primary source](https://example.org/paper)*
+**Input → output:** Verified modalities for the selected checkpoint.
 
-## Capabilities
+**Interaction:** Text output, generation, streaming or full-duplex, supported by a primary source.
 
-Document the verified text, visual and audio inputs and the model's outputs. Qualify streaming, speech generation and differences between checkpoints.
+Put checkpoint-specific limitations, family-figure scope and component dependencies here. Do not infer release dates or licenses from a related model.
 
-## Architecture and evidence
-
-Explain the components using the linked primary sources. Identify a family figure if it predates the selected release. Record release evidence in `data/models.json` before adding the entry to the catalog.
+Catalog entries belong in `data/models.json`; see `CONTRIBUTING.md`.

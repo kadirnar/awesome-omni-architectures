@@ -1,6 +1,190 @@
 {
   "schema_version": 1,
   "models": {
+    "anygpt": {
+      "kind": "source-figure",
+      "path": "assets/architectures/anygpt.png",
+      "source_url": "https://arxiv.org/abs/2402.12226",
+      "origin_url": "https://arxiv.org/html/2402.12226v5/model1.png",
+      "locator": "Figure 1",
+      "sha256": "17f0d591b3600bca99bfcb7e7009d738da9cd4e4ab71cdf74012116e9c356dd1"
+    },
+    "audio-flamingo": {
+      "kind": "source-figure",
+      "path": "assets/architectures/audio-flamingo.png",
+      "source_url": "https://arxiv.org/abs/2402.01831",
+      "origin_url": "https://arxiv.org/html/2402.01831v3/architecture.png",
+      "locator": "Figure 2",
+      "sha256": "319f8a0a66c49c16dd3ec61628147f19272a3362b4f4fb5b87a5917dd0d63a54"
+    },
+    "audio-flamingo-2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/audio-flamingo-2.png",
+      "source_url": "https://arxiv.org/abs/2503.03983",
+      "origin_url": "https://arxiv.org/html/2503.03983v1/af2_training_pipeline_latest.png",
+      "locator": "Figure 2",
+      "sha256": "159cd9a89f5b3fe49782c9e94c54df7432f47e0dfa4c8e75f80d6f72b75b178c"
+    },
+    "audio-flamingo-3": {
+      "kind": "source-figure",
+      "path": "assets/architectures/audio-flamingo-3.png",
+      "source_url": "https://arxiv.org/abs/2507.08128",
+      "origin_url": "https://arxiv.org/html/2507.08128v2/af3_main_diagram.png",
+      "locator": "Figure 2",
+      "sha256": "6aed0d1df9781878565ea602ea600b9582f846c12c00080ce0259058340c5671"
+    },
+    "audio-flamingo-next": {
+      "kind": "source-figure",
+      "path": "assets/architectures/audio-flamingo-next.png",
+      "source_url": "https://arxiv.org/abs/2604.10905",
+      "origin_url": "https://arxiv.org/html/2604.10905v1/AF-next-final_compressed.png",
+      "locator": "Figure 3",
+      "sha256": "0f0d5227daf67a9b8a52b7010076e3d2b187dff6d4d24c336fb6637cba4566e8"
+    },
+    "audio-interaction": {
+      "kind": "source-figure",
+      "path": "assets/architectures/audio-interaction.png",
+      "source_url": "https://arxiv.org/abs/2606.05121",
+      "origin_url": "https://arxiv.org/html/2606.05121v2/soundfkow.png",
+      "locator": "Figure 3",
+      "sha256": "385349e78f7e152f87fa488b086ded0d4a3f24bbd009ef681d84963b61723a9c"
+    },
+    "audio-reasoner": {
+      "kind": "source-figure",
+      "path": "assets/architectures/audio-reasoner.png",
+      "source_url": "https://arxiv.org/abs/2503.02318",
+      "origin_url": "https://arxiv.org/html/2503.02318v2/figure3-data_preparation-v3.png",
+      "locator": "Figure 3",
+      "sha256": "6340e2ed3baf0cdf6de32e22bb3fefbe6db6b9c62982e573abac35450ed7491f"
+    },
+    "audio-visual-flamingo": {
+      "kind": "source-figure",
+      "path": "assets/architectures/audio-visual-flamingo.png",
+      "source_url": "https://arxiv.org/abs/2607.16107",
+      "origin_url": "https://arxiv.org/html/2607.16107v1/temp_3.png",
+      "locator": "Figure 2",
+      "sha256": "6de76ec88e6b05c62b7e7a8ed328eb9ba7adbbfe5b82847737dca0ed9e20d52a"
+    },
+    "azeros": {
+      "kind": "source-figure",
+      "path": "assets/architectures/azeros.png",
+      "source_url": "https://arxiv.org/abs/2601.06086",
+      "origin_url": "https://arxiv.org/html/2601.06086v1/images/azeros_framework.png",
+      "locator": "Figure 1",
+      "sha256": "982c7bd3f47cfe3b5688828df29dfd7f5a880f5c8bc720dd893360e46e24c56a"
+    },
+    "baichuan-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/baichuan-audio.png",
+      "source_url": "https://arxiv.org/abs/2502.17239",
+      "origin_url": "https://arxiv.org/html/2502.17239v1/audio-llm.png",
+      "locator": "Figure 1",
+      "sha256": "adc3acab06264800a622c0b3b1c2aa6cf5905f757221efc9c76317d8c131726c"
+    },
+    "baichuan-omni-1-5": {
+      "kind": "source-figure",
+      "path": "assets/architectures/baichuan-omni-1-5.png",
+      "source_url": "https://arxiv.org/abs/2501.15368",
+      "origin_url": "https://arxiv.org/html/2501.15368v1/architecture.png",
+      "locator": "Figure 2",
+      "sha256": "0b72fb6eadbb9665d2573a964508979daa0dc36f9cebaf8b9b4d8d695934fef7"
+    },
+    "blsp-emo": {
+      "kind": "source-figure",
+      "path": "assets/architectures/blsp-emo.png",
+      "source_url": "https://arxiv.org/abs/2406.03872",
+      "origin_url": "https://arxiv.org/html/2406.03872v1/emotion_blsp_v4.png",
+      "locator": "Figure 2",
+      "sha256": "a69a051c4e24b94872354e0e9cf24a6b6b2455de4da0bb0dc4278a6b1eaa4553"
+    },
+    "br-voice-reasoner": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/br-voice-reasoner.svg",
+      "source_url": "https://huggingface.co/brgroup/BR-Voice-Reasoner",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "canary-qwen": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/canary-qwen.svg",
+      "source_url": "https://huggingface.co/nvidia/canary-qwen-2.5b",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "covo-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/covo-audio.png",
+      "source_url": "https://arxiv.org/abs/2602.09823",
+      "origin_url": "https://arxiv.org/pdf/2602.09823",
+      "locator": "Figure 2, PDF p. 4",
+      "sha256": "623ecedbbb816a52db0938d57e8cd5e403cc06c96caee3515e0361006628abf9"
+    },
+    "desta2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/desta2.png",
+      "source_url": "https://arxiv.org/abs/2409.20007",
+      "origin_url": "https://arxiv.org/html/2409.20007v2/model.png",
+      "locator": "Figure 1",
+      "sha256": "609f98b2a04a90da4075727a7affa587b70d9adc23a9c04f1b3a3f0b36f6cdfc"
+    },
+    "desta2-5-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/desta2-5-audio.png",
+      "source_url": "https://arxiv.org/abs/2507.02768",
+      "origin_url": "https://arxiv.org/html/2507.02768v2/method.png",
+      "locator": "Figure 2",
+      "sha256": "f6d39e9772d1976307517ec1348d97f7068c7cfd4fdda853ed28d945d5b4e8d7"
+    },
+    "dialects2s": {
+      "kind": "source-figure",
+      "path": "assets/architectures/opens2s.png",
+      "source_url": "https://arxiv.org/abs/2507.05177",
+      "origin_url": "https://arxiv.org/html/2507.05177v3/Architecture.png",
+      "locator": "Family figure — Figure 1",
+      "sha256": "6238ceff3e92d5914cf1d88091f826d64f4b6dca3bbdcbce6c764a20e590e85a"
+    },
+    "diffa": {
+      "kind": "source-figure",
+      "path": "assets/architectures/diffa.png",
+      "source_url": "https://arxiv.org/abs/2507.18452",
+      "origin_url": "https://arxiv.org/html/2507.18452v3/p1.png",
+      "locator": "Figure 2",
+      "sha256": "5ab58ddfd1a6edc5575763bd880842f50d442ce8f8c6af0dd0fee7a3606bdea7"
+    },
+    "diffa-2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/diffa-2.png",
+      "source_url": "https://arxiv.org/abs/2601.23161",
+      "origin_url": "https://arxiv.org/html/2601.23161v1/p1_v2.png",
+      "locator": "Figure 1",
+      "sha256": "52831c8bc520a2ed75b66921372a0a0f8cca10d3e6cc409f155299f42ada3ec6"
+    },
+    "diva": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/diva.svg",
+      "source_url": "https://huggingface.co/WillHeld/DiVA-llama-3-v0-8b",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "duplex-cascade": {
+      "kind": "source-figure",
+      "path": "assets/architectures/duplex-cascade.png",
+      "source_url": "https://arxiv.org/abs/2603.09180",
+      "origin_url": "https://arxiv.org/html/2603.09180v1/proposed.png",
+      "locator": "Figure 1",
+      "sha256": "eaa7297ba3357dd3803c4f7c1c8da555519ebe0fc77c4c926fd30c2759c83bbf"
+    },
+    "duplexmamba": {
+      "kind": "source-figure",
+      "path": "assets/architectures/duplexmamba.png",
+      "source_url": "https://arxiv.org/abs/2502.11123",
+      "origin_url": "https://arxiv.org/html/2502.11123v3/DuplexMamba4.png",
+      "locator": "Figure 1",
+      "sha256": "3cdbed1c45afd361117b85575ea38ecf70f589b4b17fe8b641ae6a2219d5284b"
+    },
     "emova": {
       "kind": "source-figure",
       "path": "assets/architectures/emova.png",
@@ -8,6 +192,30 @@
       "origin_url": "https://arxiv.org/html/2409.18042v4/flowchart.png",
       "locator": "Family figure · Figure 2",
       "sha256": "18c87efad31f86a8416af2af47011344ede325a947d291ef8b4491cccaccbf4f"
+    },
+    "freeze-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/freeze-omni.png",
+      "source_url": "https://arxiv.org/abs/2411.00774",
+      "origin_url": "https://arxiv.org/html/2411.00774v5/fig1.png",
+      "locator": "Figure 1",
+      "sha256": "021c7a86c29ec32812c4f6e4bc59e345388a51cfaca6d4aed62fd6196bb92925"
+    },
+    "fun-audio-chat": {
+      "kind": "source-figure",
+      "path": "assets/architectures/fun-audio-chat.png",
+      "source_url": "https://arxiv.org/abs/2512.20156",
+      "origin_url": "https://arxiv.org/pdf/2512.20156v4",
+      "locator": "Figure 2, PDF p. 4",
+      "sha256": "d47cb2551adf9dabc7ff4b7ef8f49c4ff60d43840498722acd9238231cde8829"
+    },
+    "gemma-3n": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/gemma-3n.svg",
+      "source_url": "https://huggingface.co/google/gemma-3n-E4B-it",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
     },
     "gemma-4-audio-capable-variants": {
       "kind": "io-diagram",
@@ -17,6 +225,62 @@
       "locator": "Input/output diagram",
       "sha256": null
     },
+    "glm-4-voice": {
+      "kind": "source-figure",
+      "path": "assets/architectures/glm-4-voice.png",
+      "source_url": "https://arxiv.org/abs/2412.02612",
+      "origin_url": "https://arxiv.org/html/2412.02612v1/overall-arch.png",
+      "locator": "Figure 2",
+      "sha256": "13755ee89fbb3d3c0926441a967cd2a3b40f3f70198d7e89fe77fc41d6a9b939"
+    },
+    "glm-asr-nano": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/glm-asr-nano.svg",
+      "source_url": "https://huggingface.co/zai-org/GLM-ASR-Nano-2512",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "granite-speech-3-3": {
+      "kind": "source-figure",
+      "path": "assets/architectures/granite-speech-3-3.png",
+      "source_url": "https://arxiv.org/abs/2505.08699",
+      "origin_url": "https://arxiv.org/html/2505.08699v2/granite-speech-arch-crop.png",
+      "locator": "Figure 1",
+      "sha256": "f08fb3e28094f3db780e24f119227864c7a5ad1428b04bf8a97e2e88a661ccd5"
+    },
+    "granite-speech-4-0": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/granite-speech-4-0.svg",
+      "source_url": "https://huggingface.co/ibm-granite/granite-4.0-1b-speech",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "granite-speech-4-1": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/granite-speech-4-1.svg",
+      "source_url": "https://huggingface.co/ibm-granite/granite-speech-4.1-2b",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "hibiki": {
+      "kind": "source-figure",
+      "path": "assets/architectures/hibiki.png",
+      "source_url": "https://arxiv.org/abs/2502.03382",
+      "origin_url": "https://arxiv.org/html/2502.03382v2/text_delays_tokens_v2.drawio.svg",
+      "locator": "Figure 2",
+      "sha256": "8a2a7e23b2d5960879067d8105c85dd6ad02ef09d75de66b98597523e52f3d47"
+    },
+    "humanomni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/humanomni.png",
+      "source_url": "https://arxiv.org/abs/2501.15111",
+      "origin_url": "https://arxiv.org/html/2501.15111v1/method_video_2.png",
+      "locator": "Figure 1",
+      "sha256": "83561b151a4665e3a068ce3adf564a960d5856035fa5621b18cb258d2609d80b"
+    },
     "humanomniv2": {
       "kind": "source-figure",
       "path": "assets/architectures/humanomniv2.png",
@@ -24,6 +288,94 @@
       "origin_url": "https://arxiv.org/html/2506.21277v1/model.png",
       "locator": "Figure 4",
       "sha256": "6d46b883410ca692c196fff8f42bbbc9d864ad119773b9bcfcdd0cf5ba7a6637"
+    },
+    "ichigo": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/ichigo.svg",
+      "source_url": "https://huggingface.co/homebrewltd/Ichigo-llama3.1-s-instruct-v0.4",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "kimi-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/kimi-audio.png",
+      "source_url": "https://arxiv.org/abs/2504.18425",
+      "origin_url": "https://arxiv.org/html/2504.18425v1/kimia-fig.png",
+      "locator": "Figure 2",
+      "sha256": "d274bbadbde72456fce01f801b4f6afd44b01d71f0f9f1abb200dbff96c48369"
+    },
+    "lfg-1": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/lfg-1.svg",
+      "source_url": "https://huggingface.co/glenn2/LFG-1",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "lfg-2": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/lfg-2.svg",
+      "source_url": "https://huggingface.co/glenn2/LFG-2",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "lfg-3": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/lfg-3.svg",
+      "source_url": "https://huggingface.co/glenn2/LFG-3",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "lfm2-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/lfm2-audio.png",
+      "source_url": "https://arxiv.org/abs/2511.23404",
+      "origin_url": "https://arxiv.org/html/2511.23404v1/audio_arch.png",
+      "locator": "Figure 7",
+      "sha256": "197f1607aeeee0fac2853ca579db183c495f601a08dc6ebf95b4584ce1c8f750"
+    },
+    "lfm2-5-audio": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/lfm2-5-audio.svg",
+      "source_url": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "lfm2-5-audio-jp": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/lfm2-5-audio-jp.svg",
+      "source_url": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B-JP",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "llama-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/llama-omni.png",
+      "source_url": "https://arxiv.org/abs/2409.06666",
+      "origin_url": "https://arxiv.org/html/2409.06666v2/llamas2s_training.png",
+      "locator": "Figure 2",
+      "sha256": "e450a5ebddfb05886e4d0d949c48b1ddb3951cd9b4cc9c50f9eb38d36d9399c0"
+    },
+    "llama-omni-2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/llama-omni-2.png",
+      "source_url": "https://arxiv.org/abs/2505.02625",
+      "origin_url": "https://arxiv.org/html/2505.02625v1/llama-omni2.png",
+      "locator": "Figure 1",
+      "sha256": "55a4f918a38314d2b43e72d9da9e2a87e9558c9c3d863a983d9360cebe1c9126"
+    },
+    "llasm": {
+      "kind": "source-figure",
+      "path": "assets/architectures/llasm.png",
+      "source_url": "https://arxiv.org/abs/2308.15930",
+      "origin_url": "https://arxiv.org/html/2308.15930v3/Figures/framework.png",
+      "locator": "Figure 1",
+      "sha256": "32c8596f0d49de49edf1a0b053cd9422d3e61e5fc4d51cacce087eb49bdc9a86"
     },
     "longcat-flash-omni": {
       "kind": "source-figure",
@@ -41,6 +393,38 @@
       "locator": "Figure 2",
       "sha256": "46d01b76dd22e1072b0d03abdcf404f1c974d24c89fdb976f7335c3d7accecb3"
     },
+    "lychee-fd": {
+      "kind": "source-figure",
+      "path": "assets/architectures/lychee-fd.png",
+      "source_url": "https://arxiv.org/abs/2607.06540",
+      "origin_url": "https://arxiv.org/html/2607.06540v4/model_v2.png",
+      "locator": "Figure 3",
+      "sha256": "656ff97d65f0ee2dd44c4b1dc8c477fc6328c5e7c9df8e05fdedae6c3c9b77d9"
+    },
+    "lyra": {
+      "kind": "source-figure",
+      "path": "assets/architectures/lyra.png",
+      "source_url": "https://arxiv.org/abs/2412.09501",
+      "origin_url": "https://arxiv.org/html/2412.09501v1/framework.png",
+      "locator": "Figure 2",
+      "sha256": "87b2ea8e1ade42753d17f6234d1bb14cc017c9b3ddaf22ac06de84495c147c0c"
+    },
+    "lyra-mini": {
+      "kind": "source-figure",
+      "path": "assets/architectures/lyra.png",
+      "source_url": "https://arxiv.org/abs/2412.09501",
+      "origin_url": "https://arxiv.org/html/2412.09501v1/framework.png",
+      "locator": "Family figure — Figure 2",
+      "sha256": "87b2ea8e1ade42753d17f6234d1bb14cc017c9b3ddaf22ac06de84495c147c0c"
+    },
+    "mair-hub-omni": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/mair-hub-omni.svg",
+      "source_url": "https://huggingface.co/yuekai/qwen-omni-like-0.5B-speech2speech-en",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
     "megrez-omni": {
       "kind": "source-figure",
       "path": "assets/architectures/megrez-omni.png",
@@ -48,6 +432,62 @@
       "origin_url": "https://arxiv.org/html/2502.15803v1/architecture_detail.jpg",
       "locator": "Figure 2",
       "sha256": "d5e9a3b5f9ebad855ee7a6b24f2a35c7accb10a8e731dcd784a806ec2ee72795"
+    },
+    "mellow": {
+      "kind": "source-figure",
+      "path": "assets/architectures/mellow.png",
+      "source_url": "https://arxiv.org/abs/2503.08540",
+      "origin_url": "https://arxiv.org/html/2503.08540v1/fig/mellow-Page-5.png",
+      "locator": "Figure 2",
+      "sha256": "397ff41a19d5c6dc0a2d0d8e1a0c50134ef0e260c2e6400a8472905aaca3ed8c"
+    },
+    "meralion-2": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/meralion-2.svg",
+      "source_url": "https://huggingface.co/MERaLiON/MERaLiON-2-10B",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "meralion-3": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/meralion-3.svg",
+      "source_url": "https://huggingface.co/MERaLiON/MERaLiON-3-10B",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "meralion-3-asr": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/meralion-3-asr.svg",
+      "source_url": "https://huggingface.co/MERaLiON/MERaLiON-3-3B-ASR",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "meralion-audiollm": {
+      "kind": "source-figure",
+      "path": "assets/architectures/meralion-audiollm.png",
+      "source_url": "https://arxiv.org/abs/2412.09818",
+      "origin_url": "https://arxiv.org/html/2412.09818v3/images/model_architecture.png",
+      "locator": "Figure 1",
+      "sha256": "4dfb93882e333a26cf2fa2cc999e29f522e4beee7a0336daf3c82baed7306917"
+    },
+    "midashenglm": {
+      "kind": "source-figure",
+      "path": "assets/architectures/midashenglm.png",
+      "source_url": "https://arxiv.org/abs/2508.03983",
+      "origin_url": "https://arxiv.org/html/2508.03983v3/Framework.png",
+      "locator": "Figure 2",
+      "sha256": "e43d19597050511551b0bf6787127adca15d01be3dfe3ee05ddb80307010894d"
+    },
+    "mimo-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/mimo-audio.png",
+      "source_url": "https://arxiv.org/abs/2512.23808",
+      "origin_url": "https://arxiv.org/html/2512.23808v1/mimoaudio_new.svg",
+      "locator": "Figure 3",
+      "sha256": "ba503fa4a05da9ae18149ae2cb2e6b960b9bc8cc351c78792a413763cb03c225"
     },
     "mimo-v2-5": {
       "kind": "source-figure",
@@ -81,6 +521,14 @@
       "locator": "Family figure · Figure 2",
       "sha256": "d36623cb640b4a0018f6e542105abcfb64e1c2e1993e9bac885a6a507eeca5fd"
     },
+    "mini-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/mini-omni.png",
+      "source_url": "https://arxiv.org/abs/2408.16725",
+      "origin_url": "https://arxiv.org/html/2408.16725v3/figures/jpg/frameworkv3.jpg",
+      "locator": "Figure 1",
+      "sha256": "596fd24e98e8f6fc64629197020eb98e90e4ff966ba437048e38bbdc14e6009d"
+    },
     "mini-omni2": {
       "kind": "source-figure",
       "path": "assets/architectures/mini-omni2.png",
@@ -113,6 +561,102 @@
       "locator": "Figure 1",
       "sha256": "2ab5286f915bfb58bba857b438f0c8ae9b9afcadf88b47943f955407a7a66c0a"
     },
+    "mio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/mio.png",
+      "source_url": "https://arxiv.org/abs/2409.17692",
+      "origin_url": "https://arxiv.org/html/2409.17692v4/mio-framework.png",
+      "locator": "Figure 1",
+      "sha256": "e286ef3191a3c9261f68180174700e6a7857f617637205f3f77eb5f447e47a7c"
+    },
+    "moshi": {
+      "kind": "source-figure",
+      "path": "assets/architectures/moshi.png",
+      "source_url": "https://arxiv.org/abs/2410.00037",
+      "origin_url": "https://arxiv.org/html/2410.00037v2/figures/overview_moshi_v2.png",
+      "locator": "Figure 1",
+      "sha256": "bc0a1acd0d46f292ca7ce70bd69ebc3ec4941987ba008303af2ee5ea1bf35bec"
+    },
+    "moss-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/moss-audio.png",
+      "source_url": "https://arxiv.org/abs/2606.01802",
+      "origin_url": "https://arxiv.org/html/2606.01802v3/arc_final_half.png",
+      "locator": "Figure 2",
+      "sha256": "74561f637b7ff61cf11809e438b336e21f6127b1faa08c0e1c8430a143460012"
+    },
+    "moss-audio-thinking": {
+      "kind": "source-figure",
+      "path": "assets/architectures/moss-audio.png",
+      "source_url": "https://arxiv.org/abs/2606.01802",
+      "origin_url": "https://arxiv.org/html/2606.01802v3/arc_final_half.png",
+      "locator": "Family figure — Figure 2",
+      "sha256": "74561f637b7ff61cf11809e438b336e21f6127b1faa08c0e1c8430a143460012"
+    },
+    "moss-speech": {
+      "kind": "source-figure",
+      "path": "assets/architectures/moss-speech.png",
+      "source_url": "https://arxiv.org/abs/2510.00499",
+      "origin_url": "https://arxiv.org/html/2510.00499v2/figure/arch.png",
+      "locator": "Figure 3",
+      "sha256": "ef9a8124f6eb92805145b45f2d5895656501ffebb17bc2d1a20fa5816a55e1b5"
+    },
+    "music-flamingo": {
+      "kind": "source-figure",
+      "path": "assets/architectures/music-flamingo.png",
+      "source_url": "https://arxiv.org/abs/2511.10289",
+      "origin_url": "https://arxiv.org/html/2511.10289v1/main_figure_v1.drawio.png",
+      "locator": "Figure 2",
+      "sha256": "3db72b0f1cc87044c8c0ab6d4a04a439b0f7fe671ed697a7902af4b691eeb8f9"
+    },
+    "nemotron-3-nano-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/nemotron-3-nano-omni.png",
+      "source_url": "https://arxiv.org/abs/2604.24954",
+      "origin_url": "https://arxiv.org/html/2604.24954v2/Nemotron_arch_v3_reduced.png",
+      "locator": "Figure 1",
+      "sha256": "00a7e3d03b7c535bdd837ffb0900f657507e6e5fc7b9fca8442e73bfb98da1ef"
+    },
+    "nemotron-audex-2b": {
+      "kind": "source-figure",
+      "path": "assets/architectures/nemotron-audex-2b.png",
+      "source_url": "https://huggingface.co/nvidia/Nemotron-Labs-Audex-2B",
+      "origin_url": "https://huggingface.co/nvidia/Nemotron-Labs-Audex-2B/resolve/77b7e1a4de899769f22c1bc074db666601c28907/assets/architecture.png",
+      "locator": "Family figure — 30B variant",
+      "sha256": "a14b22ae65ea5c92a15884d5bef8199d072a07f48f0fff116e60d50e8230c606"
+    },
+    "nemotron-audex-30b": {
+      "kind": "source-figure",
+      "path": "assets/architectures/nemotron-audex-30b.png",
+      "source_url": "https://huggingface.co/nvidia/Nemotron-Labs-Audex-30B-A3B",
+      "origin_url": "https://huggingface.co/nvidia/Nemotron-Labs-Audex-30B-A3B/resolve/4e7e342045736382ddf3e2952c313847a08642b8/assets/architecture.png",
+      "locator": "Official family architecture diagram",
+      "sha256": "a14b22ae65ea5c92a15884d5bef8199d072a07f48f0fff116e60d50e8230c606"
+    },
+    "nemotronlabs-voicechat": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/nemotronlabs-voicechat.svg",
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "next-gpt": {
+      "kind": "source-figure",
+      "path": "assets/architectures/next-gpt.png",
+      "source_url": "https://arxiv.org/abs/2309.05519",
+      "origin_url": "https://arxiv.org/pdf/2309.05519v3",
+      "locator": "Figure 1, PDF p. 2",
+      "sha256": "6dadfa62a410577f6ce3602b831732d6e55bd80bd255ccc6f91b2659689a594a"
+    },
+    "nexus": {
+      "kind": "source-figure",
+      "path": "assets/architectures/nexus.png",
+      "source_url": "https://arxiv.org/abs/2503.01879",
+      "origin_url": "https://arxiv.org/html/2503.01879v4/architecture.png",
+      "locator": "Figure 1",
+      "sha256": "c8c2c68e542920b8c9a4b63c693a02a00ffe33205d6f3e6d0045f055b120d18b"
+    },
     "ola": {
       "kind": "source-figure",
       "path": "assets/architectures/ola.png",
@@ -129,6 +673,94 @@
       "locator": "Figure 1",
       "sha256": "1bfb0ccf0b1d659bc81a204b81e136f241fbbc1f420499a4710f5c500b315fd3"
     },
+    "omni-r1-two-system-collaboration": {
+      "kind": "source-figure",
+      "path": "assets/architectures/omni-r1-two-system-collaboration.png",
+      "source_url": "https://arxiv.org/abs/2505.20256",
+      "origin_url": "https://arxiv.org/pdf/2505.20256v1",
+      "locator": "Figure 1, PDF p. 2",
+      "sha256": "7e5ffbb4d938afe42527c449de4559ded524573f8eadd28ba63bd3dbb3b64114"
+    },
+    "omnivinci": {
+      "kind": "source-figure",
+      "path": "assets/architectures/omnivinci.png",
+      "source_url": "https://arxiv.org/abs/2510.15870",
+      "origin_url": "https://arxiv.org/html/2510.15870v2/architecture_new.png",
+      "locator": "Figure 2",
+      "sha256": "57dbcefbe8eb7861d0bff9aed339847d43a06b4c78b0a03f41dbe17c01cbcc20"
+    },
+    "onellm": {
+      "kind": "source-figure",
+      "path": "assets/architectures/onellm.png",
+      "source_url": "https://arxiv.org/abs/2312.03700",
+      "origin_url": "https://arxiv.org/html/2312.03700v2/framework_full.png",
+      "locator": "Figure 2",
+      "sha256": "807934fcfd09a386aec70de59611fa7d39c7f306ac3b363865dac4c46b58a5a7"
+    },
+    "openomni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/openomni.png",
+      "source_url": "https://arxiv.org/abs/2501.04561",
+      "origin_url": "https://arxiv.org/html/2501.04561v6/overview-v4.png",
+      "locator": "Figure 1",
+      "sha256": "2aaeefc30388402b16db4cf37c71b01dd94526c9a8b22e9eb5ed405344089fa7"
+    },
+    "opens2s": {
+      "kind": "source-figure",
+      "path": "assets/architectures/opens2s.png",
+      "source_url": "https://arxiv.org/abs/2507.05177",
+      "origin_url": "https://arxiv.org/html/2507.05177v3/Architecture.png",
+      "locator": "Figure 1",
+      "sha256": "6238ceff3e92d5914cf1d88091f826d64f4b6dca3bbdcbce6c764a20e590e85a"
+    },
+    "opens2s-1-5": {
+      "kind": "source-figure",
+      "path": "assets/architectures/opens2s.png",
+      "source_url": "https://arxiv.org/abs/2507.05177",
+      "origin_url": "https://arxiv.org/html/2507.05177v3/Architecture.png",
+      "locator": "Family figure — Figure 1",
+      "sha256": "6238ceff3e92d5914cf1d88091f826d64f4b6dca3bbdcbce6c764a20e590e85a"
+    },
+    "osum": {
+      "kind": "source-figure",
+      "path": "assets/architectures/osum.png",
+      "source_url": "https://arxiv.org/abs/2501.13306",
+      "origin_url": "https://arxiv.org/html/2501.13306v2/system.png",
+      "locator": "Figure 2",
+      "sha256": "73c6a17d05eff280fda0070a459010f37507f1292695784642b0a7ae5e39b28e"
+    },
+    "osum-echat": {
+      "kind": "source-figure",
+      "path": "assets/architectures/osum-echat.png",
+      "source_url": "https://arxiv.org/abs/2508.09600",
+      "origin_url": "https://arxiv.org/html/2508.09600v2/OSUM-Chat-Structure.png",
+      "locator": "Figure 2",
+      "sha256": "8da3179309d457b4d1ddf3299543ff0796bdef812daa929bd6f9cc9118da076c"
+    },
+    "parabridge": {
+      "kind": "source-figure",
+      "path": "assets/architectures/parabridge.png",
+      "source_url": "https://arxiv.org/abs/2606.10581",
+      "origin_url": "https://arxiv.org/html/2606.10581v2/training.png",
+      "locator": "Figure 3",
+      "sha256": "f6718ffe7ed067f12972eecb2a5e8b3a2ca47abfc022fb48fb2998e90c3a0c2e"
+    },
+    "parakeet-qwen3": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/parakeet-qwen3.svg",
+      "source_url": "https://huggingface.co/Qwen/Qwen3-8B",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "personaplex": {
+      "kind": "source-figure",
+      "path": "assets/architectures/personaplex.png",
+      "source_url": "https://arxiv.org/abs/2602.06053",
+      "origin_url": "https://arxiv.org/html/2602.06053v1/personaplex_release_arch.png",
+      "locator": "Figure 1",
+      "sha256": "93129a86a0c774ce119776b1368a2a48e36aa1fefecfbbbea7f26095574d6103"
+    },
     "phi-4-multimodal": {
       "kind": "source-figure",
       "path": "assets/architectures/phi-4-multimodal.png",
@@ -136,6 +768,22 @@
       "origin_url": "https://arxiv.org/html/2503.01743v2/phi-o.svg",
       "locator": "Figure 1",
       "sha256": "b725a9511524a3f14654e58f9a97a2db350d370d05e280c8f06f73a0b53e7390"
+    },
+    "qwen-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/qwen-audio.png",
+      "source_url": "https://arxiv.org/abs/2311.07919",
+      "origin_url": "https://arxiv.org/html/2311.07919v2/framework.png",
+      "locator": "Figure 3",
+      "sha256": "89f9fb79891e5bd2d9f86fcc649a994cfa75c60a662a5a9e1c28d9add7cef376"
+    },
+    "qwen2-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/qwen2-audio.png",
+      "source_url": "https://arxiv.org/abs/2407.10759",
+      "origin_url": "https://arxiv.org/html/2407.10759v1/framework.png",
+      "locator": "Figure 2",
+      "sha256": "e24601ba7e265380c379f9f11ba96e13021e017fb65324e9c9b218f537c1ad99"
     },
     "qwen2-5-omni": {
       "kind": "source-figure",
@@ -145,6 +793,14 @@
       "locator": "Figure 2",
       "sha256": "2d45a64b478bee273f677c527ee8acfbebfd2c69a2169a3d035afd90eb6c1889"
     },
+    "qwen3-asr": {
+      "kind": "source-figure",
+      "path": "assets/architectures/qwen3-asr.png",
+      "source_url": "https://arxiv.org/abs/2601.21337",
+      "origin_url": "https://arxiv.org/html/2601.21337v2/overview.svg",
+      "locator": "Figure 2",
+      "sha256": "f936045afae8c3a7a2911fcbe9c179b3f1b576f569948cc25182fa342ae03ed5"
+    },
     "qwen3-omni": {
       "kind": "source-figure",
       "path": "assets/architectures/qwen3-omni.png",
@@ -153,6 +809,222 @@
       "locator": "Figure 2",
       "sha256": "2fd6b7ba1cb6f2ebe75375bd22b1cdc807457a1114c95c05f894d76bb41edf2d"
     },
+    "qwen3-omni-thinking": {
+      "kind": "source-figure",
+      "path": "assets/architectures/qwen3-omni.png",
+      "source_url": "https://arxiv.org/abs/2509.17765",
+      "origin_url": "https://arxiv.org/html/2509.17765v1/figures/overview.png",
+      "locator": "Family figure — Figure 2",
+      "sha256": "2fd6b7ba1cb6f2ebe75375bd22b1cdc807457a1114c95c05f894d76bb41edf2d"
+    },
+    "r1-omni": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/r1-omni.svg",
+      "source_url": "https://huggingface.co/StarJiaxing/R1-Omni-0.5B",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "salmonn": {
+      "kind": "source-figure",
+      "path": "assets/architectures/salmonn.png",
+      "source_url": "https://arxiv.org/abs/2310.13289",
+      "origin_url": "https://arxiv.org/html/2310.13289v2/salmonn.png",
+      "locator": "Figure 1",
+      "sha256": "73d323d98fed54a7c474968f9ab2ffeccac4f5f353649b1df84ebcf5432d08c7"
+    },
+    "salmonn-2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/salmonn-2.png",
+      "source_url": "https://arxiv.org/abs/2607.17079",
+      "origin_url": "https://arxiv.org/html/2607.17079v1/SALMONN2.png",
+      "locator": "Figure 2",
+      "sha256": "86946611d9b4f581296d9d7c474eeb410ff1e5e58a4a5e814c12d66b3dcb4ec6"
+    },
+    "slam-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/slam-omni.png",
+      "source_url": "https://arxiv.org/abs/2412.15649",
+      "origin_url": "https://arxiv.org/html/2412.15649v1/SLAM-Omni.png",
+      "locator": "Figure 2",
+      "sha256": "e059828944fa06156b9a21f20144578ebd86d763e48bac23e386bdcdaf83d607"
+    },
+    "soulx-duplug": {
+      "kind": "source-figure",
+      "path": "assets/architectures/soulx-duplug.png",
+      "source_url": "https://arxiv.org/abs/2603.14877",
+      "origin_url": "https://arxiv.org/html/2603.14877v1/duplex_model_3.png",
+      "locator": "Figure 4",
+      "sha256": "cc77dd46f7f0901b844fdea265482303a90f950a678096055e9a20de2e5d3e80"
+    },
+    "speechgpt": {
+      "kind": "source-figure",
+      "path": "assets/architectures/speechgpt.png",
+      "source_url": "https://arxiv.org/abs/2305.11000",
+      "origin_url": "https://arxiv.org/html/2305.11000v2/SpeechGPT-main.png",
+      "locator": "Figure 2",
+      "sha256": "dc20c9795f3edf8247349b1935768439063f82642182f01c936f9c9d70dac2dc"
+    },
+    "speechgpt-2-0-preview": {
+      "kind": "source-figure",
+      "path": "assets/architectures/speechgpt-2-0-preview.png",
+      "source_url": "https://github.com/OpenMOSS/SpeechGPT-2.0-preview",
+      "origin_url": "https://raw.githubusercontent.com/OpenMOSS/SpeechGPT-2.0-preview/main/asset/sg2_arch.jpg",
+      "locator": "Official architecture diagram",
+      "sha256": "72fb30c9da79eb491ed3563d1ebe2b71cdc07f21d4bf5cc74a27b343244550af"
+    },
+    "step-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/step-audio.png",
+      "source_url": "https://arxiv.org/abs/2502.11946",
+      "origin_url": "https://arxiv.org/html/2502.11946v2/stepAudio-20250217-ff.png",
+      "locator": "Figure 2",
+      "sha256": "76ac0f53f1ca2a4017aa177ca447465ac9a9801ebdadd0c7b5714e8618a6bc2c"
+    },
+    "step-audio-2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/step-audio-2.png",
+      "source_url": "https://arxiv.org/abs/2507.16632",
+      "origin_url": "https://arxiv.org/html/2507.16632v3/architecture5.png",
+      "locator": "Figure 3",
+      "sha256": "f443c1719a09085d98af90198c27a4cd32acc386f59b95829fa98f26d341cb56"
+    },
+    "step-audio-2-think": {
+      "kind": "source-figure",
+      "path": "assets/architectures/step-audio-2.png",
+      "source_url": "https://arxiv.org/abs/2507.16632",
+      "origin_url": "https://arxiv.org/html/2507.16632v3/architecture5.png",
+      "locator": "Family figure — Figure 3",
+      "sha256": "f443c1719a09085d98af90198c27a4cd32acc386f59b95829fa98f26d341cb56"
+    },
+    "step-audio-aqaa": {
+      "kind": "source-figure",
+      "path": "assets/architectures/step-audio-aqaa.png",
+      "source_url": "https://arxiv.org/abs/2506.08967",
+      "origin_url": "https://arxiv.org/html/2506.08967v2/AQAA_arch03.png",
+      "locator": "Figure 1",
+      "sha256": "8a574903728e54e752fff2e0a911806126568ba650cc1773a463de730b328b22"
+    },
+    "step-audio-r1": {
+      "kind": "source-figure",
+      "path": "assets/architectures/step-audio-r1.png",
+      "source_url": "https://arxiv.org/abs/2511.15848",
+      "origin_url": "https://arxiv.org/html/2511.15848v2/overview_final.png",
+      "locator": "Figure 2",
+      "sha256": "e3d9005b90f950855c297ac10bd67cecd2e559319f1317f4813062de8702044c"
+    },
+    "step-audio-r1-1": {
+      "kind": "source-figure",
+      "path": "assets/architectures/step-audio-r1-1.png",
+      "source_url": "https://arxiv.org/abs/2510.09592",
+      "origin_url": "https://arxiv.org/html/2510.09592v2/structure-spkthksim-v8.svg",
+      "locator": "Related method — Mind-Paced Speaking, Figure 3",
+      "sha256": "5d758907428a93a9e238495dc60ede7206b78d30c73a8d54788cacfef2a4b5b4"
+    },
+    "stream-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/stream-omni.png",
+      "source_url": "https://arxiv.org/abs/2506.13642",
+      "origin_url": "https://arxiv.org/html/2506.13642v2/model.png",
+      "locator": "Figure 2",
+      "sha256": "c5b7d002ad928dd4255a7a859b6cc043c1292486fd63100aeedd2bad4481a0d6"
+    },
+    "sympatheia": {
+      "kind": "source-figure",
+      "path": "assets/architectures/sympatheia.png",
+      "source_url": "https://arxiv.org/abs/2606.00851",
+      "origin_url": "https://arxiv.org/html/2606.00851v1/figures/architecture.png",
+      "locator": "Figure 3",
+      "sha256": "846b962b494804244180fad1407330903b51c23f11b795a8d2ac8c000f45dc08"
+    },
+    "turnguide": {
+      "kind": "source-figure",
+      "path": "assets/architectures/turnguide.png",
+      "source_url": "https://arxiv.org/abs/2508.07375",
+      "origin_url": "https://arxiv.org/html/2508.07375v3/methodology_overall.png",
+      "locator": "Figure 2",
+      "sha256": "c888d6a3280b4d3d346270303566760cc4d654846dd33029c2b0e440165f4504"
+    },
+    "ultravox-0-4-1": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ultravox.png",
+      "source_url": "https://github.com/fixie-ai/ultravox",
+      "origin_url": "https://raw.githubusercontent.com/fixie-ai/ultravox/main/docs/assets/Ultravox%20Model%20Architecture.svg",
+      "locator": "Family figure — Llama-based example",
+      "sha256": "d00b92d335dc4fb352c5d4f72553771363305f0ae5d2b8389dd0cbb2eab8cd51"
+    },
+    "ultravox-0-5-8b": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ultravox.png",
+      "source_url": "https://github.com/fixie-ai/ultravox",
+      "origin_url": "https://raw.githubusercontent.com/fixie-ai/ultravox/main/docs/assets/Ultravox%20Model%20Architecture.svg",
+      "locator": "Family figure — Llama-based example",
+      "sha256": "d00b92d335dc4fb352c5d4f72553771363305f0ae5d2b8389dd0cbb2eab8cd51"
+    },
+    "ultravox-0-5-1b": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ultravox.png",
+      "source_url": "https://github.com/fixie-ai/ultravox",
+      "origin_url": "https://raw.githubusercontent.com/fixie-ai/ultravox/main/docs/assets/Ultravox%20Model%20Architecture.svg",
+      "locator": "Family figure — Llama-based example",
+      "sha256": "d00b92d335dc4fb352c5d4f72553771363305f0ae5d2b8389dd0cbb2eab8cd51"
+    },
+    "ultravox-0-6-gemma3": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ultravox.png",
+      "source_url": "https://github.com/fixie-ai/ultravox",
+      "origin_url": "https://raw.githubusercontent.com/fixie-ai/ultravox/main/docs/assets/Ultravox%20Model%20Architecture.svg",
+      "locator": "Family figure — Llama-based example",
+      "sha256": "d00b92d335dc4fb352c5d4f72553771363305f0ae5d2b8389dd0cbb2eab8cd51"
+    },
+    "ultravox-0-6-8b": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ultravox.png",
+      "source_url": "https://github.com/fixie-ai/ultravox",
+      "origin_url": "https://raw.githubusercontent.com/fixie-ai/ultravox/main/docs/assets/Ultravox%20Model%20Architecture.svg",
+      "locator": "Family figure — Llama-based example",
+      "sha256": "d00b92d335dc4fb352c5d4f72553771363305f0ae5d2b8389dd0cbb2eab8cd51"
+    },
+    "ultravox-0-6-70b": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ultravox.png",
+      "source_url": "https://github.com/fixie-ai/ultravox",
+      "origin_url": "https://raw.githubusercontent.com/fixie-ai/ultravox/main/docs/assets/Ultravox%20Model%20Architecture.svg",
+      "locator": "Family figure — Llama-based example",
+      "sha256": "d00b92d335dc4fb352c5d4f72553771363305f0ae5d2b8389dd0cbb2eab8cd51"
+    },
+    "ultravox-0-6-qwen3": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ultravox.png",
+      "source_url": "https://github.com/fixie-ai/ultravox",
+      "origin_url": "https://raw.githubusercontent.com/fixie-ai/ultravox/main/docs/assets/Ultravox%20Model%20Architecture.svg",
+      "locator": "Family figure — Llama-based example",
+      "sha256": "d00b92d335dc4fb352c5d4f72553771363305f0ae5d2b8389dd0cbb2eab8cd51"
+    },
+    "ultravox-0-7-glm-4-6": {
+      "kind": "source-figure",
+      "path": "assets/architectures/ultravox.png",
+      "source_url": "https://github.com/fixie-ai/ultravox",
+      "origin_url": "https://raw.githubusercontent.com/fixie-ai/ultravox/main/docs/assets/Ultravox%20Model%20Architecture.svg",
+      "locator": "Family figure — Llama-based example",
+      "sha256": "d00b92d335dc4fb352c5d4f72553771363305f0ae5d2b8389dd0cbb2eab8cd51"
+    },
+    "uni-moe-2-0-omni": {
+      "kind": "source-figure",
+      "path": "assets/architectures/uni-moe-2-0-omni.png",
+      "source_url": "https://arxiv.org/abs/2511.12609",
+      "origin_url": "https://arxiv.org/html/2511.12609v2/figures/model.png",
+      "locator": "Figure 2",
+      "sha256": "407115466ab5ec1b007072ad4ce9ca8af667358ef11c92c4a64d47ff5e235b42"
+    },
+    "vibevoice-asr": {
+      "kind": "source-figure",
+      "path": "assets/architectures/vibevoice-asr.png",
+      "source_url": "https://arxiv.org/abs/2601.18184",
+      "origin_url": "https://arxiv.org/html/2601.18184v2/vibevoice-cropped.png",
+      "locator": "Figure 2",
+      "sha256": "4bc22d3b439ce71d54c2aff42dcef6f55625568c6f1641c40a7dd8bef4c204a4"
+    },
     "video-salmonn-2": {
       "kind": "source-figure",
       "path": "assets/architectures/video-salmonn-2.png",
@@ -160,6 +1032,126 @@
       "origin_url": "https://arxiv.org/html/2506.15220v3/iclr26main.png",
       "locator": "Family figure · Figure 1",
       "sha256": "3516d9496b49a98f668f868cd9ff0162883dfb9e6dfab7feb67200cea668b145"
+    },
+    "videollama-2": {
+      "kind": "source-figure",
+      "path": "assets/architectures/videollama-2.png",
+      "source_url": "https://arxiv.org/abs/2406.07476",
+      "origin_url": "https://arxiv.org/html/2406.07476v3/overall_pipeline_v3.png",
+      "locator": "Figure 1",
+      "sha256": "238009006d0c7b23d5a431dc22a3cad9e9b05e66896fde10963007aacdb5165f"
+    },
+    "vita": {
+      "kind": "source-figure",
+      "path": "assets/architectures/vita.png",
+      "source_url": "https://arxiv.org/abs/2408.05211",
+      "origin_url": "https://arxiv.org/html/2408.05211v3/teaser.png",
+      "locator": "Figure 2",
+      "sha256": "ab5b8dea16b8ff80a31ab7e04c123dd0403fb0a556407bec98d7d2769fe6b463"
+    },
+    "vita-1-5": {
+      "kind": "source-figure",
+      "path": "assets/architectures/vita-1-5.png",
+      "source_url": "https://arxiv.org/abs/2501.01957",
+      "origin_url": "https://arxiv.org/html/2501.01957v4/model.png",
+      "locator": "Figure 2",
+      "sha256": "88db60ea81e97aa4bbf8f86ef06b907cc224c5a3866112725637988e2230afca"
+    },
+    "vita-audio": {
+      "kind": "source-figure",
+      "path": "assets/architectures/vita-audio.png",
+      "source_url": "https://arxiv.org/abs/2505.03739",
+      "origin_url": "https://arxiv.org/html/2505.03739v2/VITA_audio_framework_v1.png",
+      "locator": "Figure 2",
+      "sha256": "391d5aa4f1e48898788a178a6ee9214dab56abae691ef7f1c93bab4530ba1ea7"
+    },
+    "vita-audio-plus": {
+      "kind": "source-figure",
+      "path": "assets/architectures/vita-audio.png",
+      "source_url": "https://arxiv.org/abs/2505.03739",
+      "origin_url": "https://arxiv.org/html/2505.03739v2/VITA_audio_framework_v1.png",
+      "locator": "Family figure — Figure 2",
+      "sha256": "391d5aa4f1e48898788a178a6ee9214dab56abae691ef7f1c93bab4530ba1ea7"
+    },
+    "voila-autonomous": {
+      "kind": "source-figure",
+      "path": "assets/architectures/voila.png",
+      "source_url": "https://arxiv.org/abs/2505.02707",
+      "origin_url": "https://arxiv.org/html/2505.02707v1/voila-archs-joint.png",
+      "locator": "Family figure — Figure 2",
+      "sha256": "6cd14d6bbb6b29c206e1b833fb1bfb743c76e22b47aed8fbe0a4c138a3b47063"
+    },
+    "voila": {
+      "kind": "source-figure",
+      "path": "assets/architectures/voila.png",
+      "source_url": "https://arxiv.org/abs/2505.02707",
+      "origin_url": "https://arxiv.org/html/2505.02707v1/voila-archs-joint.png",
+      "locator": "Figure 2",
+      "sha256": "6cd14d6bbb6b29c206e1b833fb1bfb743c76e22b47aed8fbe0a4c138a3b47063"
+    },
+    "voxmind": {
+      "kind": "source-figure",
+      "path": "assets/architectures/voxmind.png",
+      "source_url": "https://arxiv.org/abs/2604.15710",
+      "origin_url": "https://arxiv.org/html/2604.15710v1/Architecture.png",
+      "locator": "Figure 2",
+      "sha256": "f5f65762d602a4779a7e3fd3d40d4ea785aed15f9bca5588bde959b37e288b4a"
+    },
+    "voxtral-mini": {
+      "kind": "source-figure",
+      "path": "assets/architectures/voxtral.png",
+      "source_url": "https://arxiv.org/abs/2507.13264",
+      "origin_url": "https://arxiv.org/html/2507.13264v1/images/voxtral-arch.002.jpeg",
+      "locator": "Family figure — Figure 1",
+      "sha256": "796c9731ac7bbc57217e7877c6275fd49ebf439290b5ec8cbcb6112a319aec4c"
+    },
+    "voxtral-realtime": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/voxtral-realtime.svg",
+      "source_url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "voxtral": {
+      "kind": "source-figure",
+      "path": "assets/architectures/voxtral.png",
+      "source_url": "https://arxiv.org/abs/2507.13264",
+      "origin_url": "https://arxiv.org/html/2507.13264v1/images/voxtral-arch.002.jpeg",
+      "locator": "Figure 1",
+      "sha256": "796c9731ac7bbc57217e7877c6275fd49ebf439290b5ec8cbcb6112a319aec4c"
+    },
+    "whisper-v3-llama31": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/whisper-v3-llama31.svg",
+      "source_url": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "whisper-turbo-llama31": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/whisper-turbo-llama31.svg",
+      "source_url": "https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "whisper-turbo-llama32": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/whisper-turbo-llama32.svg",
+      "source_url": "https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
+    },
+    "omni-r1-audio-reasoning": {
+      "kind": "io-diagram",
+      "path": "assets/architectures/omni-r1-audio-reasoning.svg",
+      "source_url": "https://github.com/roudimit/Omni-R1",
+      "origin_url": null,
+      "locator": "Input/output diagram",
+      "sha256": null
     }
   }
 }
